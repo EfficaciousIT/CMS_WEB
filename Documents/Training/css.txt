@@ -1,0 +1,14 @@
+.textcss
+{
+	font-family:Verdana, MS Reference Sans Serif, Arial;
+	font-size:10px;
+	 text-align: left;
+	height: 18px;
+}
+.textsize
+{
+	margin-right: 0px;
+	font-family:Verdana, Arial, Sans-Serif;
+	font-size:10px;
+	
+}

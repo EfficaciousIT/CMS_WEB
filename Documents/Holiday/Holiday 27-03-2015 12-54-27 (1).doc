@@ -1,0 +1,15 @@
+<div>
+	<table class="mGrid" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_TabContainer1_tab_grvDetail" style="width:100%;border-collapse:collapse;">
+		<tr>
+			<th scope="col">Document</th><th scope="col">Holiday Type</th><th scope="col">Name</th><th scope="col">From Date</th><th scope="col">To Date</th><th scope="col">No Of Days</th>
+		</tr><tr>
+			<td>
+                                                                                            <input type="image" name="ctl00$ContentPlaceHolder1$TabContainer1$tab$grvDetail$ctl02$ImgView" id="ctl00_ContentPlaceHolder1_TabContainer1_tab_grvDetail_ctl02_ImgView" src="images/action_success.png" onclick="SetTarget();" style="border-width:0px;" />
+                                                                                        </td><td align="left">Public</td><td align="left">Holi</td><td>06/03/2015</td><td>06/03/2015</td><td>1</td>
+		</tr><tr>
+			<td>
+                                                                                            <input type="image" name="ctl00$ContentPlaceHolder1$TabContainer1$tab$grvDetail$ctl03$ImgView" id="ctl00_ContentPlaceHolder1_TabContainer1_tab_grvDetail_ctl03_ImgView" src="images/action_success.png" onclick="SetTarget();" style="border-width:0px;" />
+                                                                                        </td><td align="left">Public</td><td align="left">Ramnavmi</td><td>28/03/2015</td><td>28/03/2015</td><td>1</td>
+		</tr>
+	</table>
+</div>

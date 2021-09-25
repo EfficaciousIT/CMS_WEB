@@ -1,0 +1,275 @@
+<%@ Page Language="C#" MasterPageFile="~/newMasterPage.master" AutoEventWireup="true"
+    CodeFile="FrmTeacherProfile.aspx.cs" Inherits="FrmTeacherProfile" Title="Untitled Page" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" Height="655px"
+        Width="894px">
+        <asp:TabPanel runat="server" HeaderText="TabPanel1" ID="TabPanel1">
+            <HeaderTemplate>
+                Personal Details</HeaderTemplate>
+            <ContentTemplate>
+                <table style="font-weight: bolder; width: 496px; margin: 10px 0;" align="center">
+                    <tr>
+                        <td align="center" colspan="2">
+                            <asp:Label ID="Label7" runat="server" Text="Personal Details"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="lblvchno" runat="server">First Name:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtvchmake0" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="lblvchmake" runat="server">Middle Name:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtvchmake" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="lblvchdrivername" runat="server" Text="Last Name"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <%--<tr>
+                        <td align="right">
+                            <asp:Label ID="Label9" runat="server" Text="Staff Category"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox6" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>--%>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label12" runat="server" Text="Department id"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox8" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label13" runat="server" Text="Gender"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox9" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label14" runat="server" Text="Date of Birth"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox10" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="lbldrivermobno" runat="server" Text="Email"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox2" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="201px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label15" runat="server" Text="Highest Qualifiacation"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox11" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label16" runat="server" Text="Home Telphone number 1"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox12" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label17" runat="server" Text="Home Telphone number 2"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox13" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label18" runat="server" Text="Mobile number"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox14" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label19" runat="server" Text="facebook url"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox15" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label20" runat="server" Text="Twitter Url"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox16" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label21" runat="server" Text="Other Url"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox17" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:ImageButton ID="btnsubmit" runat="server" ForeColor="#999999" Height="28px"
+                                ImageUrl="~/images/submit.png" ValidationGroup="b" Width="64px" />
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton ID="btnclr" runat="server" Height="28px" ImageUrl="~/images/cancel.png"
+                                Width="64px" />
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:TabPanel>
+        <asp:TabPanel ID="TabPanel2" runat="server" HeaderText="TabPanel2">
+            <HeaderTemplate>
+                Address Details
+            </HeaderTemplate>
+            <ContentTemplate>
+                <table style="font-weight: bolder; width: 496px; margin: 10px 0;" align="center">
+                    <tr>
+                        <td align="center" colspan="2">
+                            <asp:Label ID="Label8" runat="server" Text="Address Details:"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label3" runat="server">Present Address</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox4" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px" Height="55px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label4" runat="server" Text="Permanet Address"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox5" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                ForeColor="Black" MaxLength="20" ValidationGroup="b" Width="200px" Height="48px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:ImageButton ID="ImageButton1" runat="server" ForeColor="#999999" Height="28px"
+                                ImageUrl="~/images/submit.png" ValidationGroup="b" Width="64px" />
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton ID="ImageButton2" runat="server" Height="28px" ImageUrl="~/images/cancel.png"
+                                Width="64px" />
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:TabPanel>
+        <asp:TabPanel ID="TabPanel3" runat="server" HeaderText="TabPanel3">
+            <HeaderTemplate>
+                Others Deatils</HeaderTemplate>
+            <ContentTemplate>
+                <table style="font-weight: bolder; width: 496px; margin: 10px 0;" align="center">
+                    <tr>
+                        <td align="center" colspan="2">
+                            <asp:Label ID="Label1" runat="server" Text="Other Deatils"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label2" runat="server" Text="Highest Qualifiacation:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList2" runat="server" Width="75px">
+                                <asp:ListItem Selected="True">--select--</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label5" runat="server" Text="Year of Passing:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList3" runat="server" Width="75px">
+                                <asp:ListItem Selected="True">--select--</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label6" runat="server" Text="Work Experience:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList4" runat="server" Width="75px">
+                                <asp:ListItem Selected="True">--select--</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:Label ID="Label10" runat="server" Text="Availability:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList5" runat="server" Width="75px">
+                                <asp:ListItem Selected="True">--select--</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <asp:ImageButton ID="ImageButton3" runat="server" ForeColor="#999999" Height="28px"
+                                ImageUrl="~/images/submit.png" ValidationGroup="b" Width="64px" />
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton ID="ImageButton4" runat="server" Height="28px" ImageUrl="~/images/cancel.png"
+                                Width="64px" />
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:TabPanel>
+    </asp:TabContainer>
+</asp:Content>

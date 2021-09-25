@@ -1,0 +1,169 @@
+20141111-134109.398 3.5.223 TID:07272 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134109.559 3.5.223 TID:08112 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134109.580 3.5.223 TID:08116 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134109.596 3.5.223 TID:08120 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134109.641 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#13 CGPreventUninstallDialog::CGPreventUninstallDialog(): Entered Method
+20141111-134109.662 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#17 CGPreventUninstallDialog::CGPreventUninstallDialog(): Exited Method
+20141111-134109.680 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141111-134109.728 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141111-134109.740 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141111-134109.758 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141111-134109.774 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#76 CGPreventUninstallDialog::OnInitDialog(): Entered Method
+20141111-134109.781 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#94 CGPreventUninstallDialog::OnInitDialog(): Exited Method
+20141111-134109.788 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#101 CGPreventUninstallDialog::OnCtlColorDlg(): Entered Method
+20141111-134109.804 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#102 CGPreventUninstallDialog::OnCtlColorDlg(): Exited Method
+20141111-134109.813 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141111-134109.829 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141111-134109.835 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141111-134109.851 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141111-134109.857 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141111-134109.862 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141111-134109.868 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141111-134109.873 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141111-134126.686 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141111-134126.704 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141111-134126.708 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141111-134126.712 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141111-134126.718 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141111-134126.722 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141111-134126.726 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141111-134126.730 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141111-134126.742 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141111-134126.770 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#118 CGPreventUninstallDialog::ExitDialog(): Entered Method
+20141111-134126.776 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#126 CGPreventUninstallDialog::ExitDialog(): Exited Method
+20141111-134126.781 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141111-134126.787 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#22 CGPreventUninstallDialog::~CGPreventUninstallDialog(): Entered Method
+20141111-134126.791 3.5.223 TID:07272 C D GPreventUninstallDialog.cpp,L#23 CGPreventUninstallDialog::~CGPreventUninstallDialog(): Exited Method
+20141111-134126.802 3.5.223 TID:07272 C D GingerSetupHelper.cpp,L#1113 ReportUninstallRecoveryResult(): Entered Method
+20141111-134127.977 3.5.223 TID:07272 C D GingerSetupHelper.cpp,L#1151 ReportUninstallRecoveryResult(): Exited Method
+20141111-134133.195 3.5.223 TID:01172 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134136.397 3.5.223 TID:07272 C D GingerSetupHelper.cpp,L#585 InstallFailureReportEvent2(): Entered Method
+20141111-134136.409 3.5.223 TID:06876 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134136.420 3.5.223 TID:07404 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134136.462 3.5.223 TID:04356 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134136.470 3.5.223 TID:04552 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141111-134137.150 3.5.223 TID:07272 C D GingerSetupHelper.cpp,L#602 InstallFailureReportEvent2(): Exited Method
+20141114-102928.674 3.5.223 TID:06352 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102928.804 3.5.223 TID:01640 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102928.857 3.5.223 TID:06724 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102928.885 3.5.223 TID:01604 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102928.964 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#13 CGPreventUninstallDialog::CGPreventUninstallDialog(): Entered Method
+20141114-102929.013 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#17 CGPreventUninstallDialog::CGPreventUninstallDialog(): Exited Method
+20141114-102929.069 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-102929.115 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-102929.174 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-102929.247 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-102929.260 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#76 CGPreventUninstallDialog::OnInitDialog(): Entered Method
+20141114-102929.276 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#94 CGPreventUninstallDialog::OnInitDialog(): Exited Method
+20141114-102929.299 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#101 CGPreventUninstallDialog::OnCtlColorDlg(): Entered Method
+20141114-102929.349 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#102 CGPreventUninstallDialog::OnCtlColorDlg(): Exited Method
+20141114-102929.385 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-102929.392 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-102929.437 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141114-102929.491 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141114-102929.552 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-102929.603 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-102929.665 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-102929.693 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-102937.334 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141114-102937.365 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141114-102944.818 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141114-102944.843 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141114-102944.886 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141114-102944.911 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141114-102944.988 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#133 CGPreventUninstallDialog::OnPrevent(): Entered Method
+20141114-102945.007 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#118 CGPreventUninstallDialog::ExitDialog(): Entered Method
+20141114-102945.016 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#126 CGPreventUninstallDialog::ExitDialog(): Exited Method
+20141114-102945.067 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#137 CGPreventUninstallDialog::OnPrevent(): Exited Method
+20141114-102945.121 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#22 CGPreventUninstallDialog::~CGPreventUninstallDialog(): Entered Method
+20141114-102945.163 3.5.223 TID:06352 C D GPreventUninstallDialog.cpp,L#23 CGPreventUninstallDialog::~CGPreventUninstallDialog(): Exited Method
+20141114-102945.185 3.5.223 TID:06352 C D GingerSetupHelper.cpp,L#1113 ReportUninstallRecoveryResult(): Entered Method
+20141114-102946.621 3.5.223 TID:06352 C D GingerSetupHelper.cpp,L#1151 ReportUninstallRecoveryResult(): Exited Method
+20141114-102946.631 3.5.223 TID:01620 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102949.845 3.5.223 TID:06352 C D GingerSetupHelper.cpp,L#585 InstallFailureReportEvent2(): Entered Method
+20141114-102949.956 3.5.223 TID:06660 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102949.976 3.5.223 TID:00212 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102950.027 3.5.223 TID:00164 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102950.052 3.5.223 TID:06404 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-102950.788 3.5.223 TID:06352 C D GingerSetupHelper.cpp,L#602 InstallFailureReportEvent2(): Exited Method
+20141114-103024.136 3.5.223 TID:02884 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103024.183 3.5.223 TID:02168 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103024.207 3.5.223 TID:02184 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103024.242 3.5.223 TID:06684 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103024.323 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#13 CGPreventUninstallDialog::CGPreventUninstallDialog(): Entered Method
+20141114-103024.364 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#17 CGPreventUninstallDialog::CGPreventUninstallDialog(): Exited Method
+20141114-103024.386 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-103024.391 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-103024.396 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-103024.407 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-103024.424 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#76 CGPreventUninstallDialog::OnInitDialog(): Entered Method
+20141114-103024.440 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#94 CGPreventUninstallDialog::OnInitDialog(): Exited Method
+20141114-103024.482 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#101 CGPreventUninstallDialog::OnCtlColorDlg(): Entered Method
+20141114-103024.518 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#102 CGPreventUninstallDialog::OnCtlColorDlg(): Exited Method
+20141114-103024.522 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-103024.545 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-103024.594 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141114-103024.621 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141114-103024.627 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-103024.647 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-103024.680 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-103024.706 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-103026.340 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-103026.359 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-103026.363 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#30 CGPreventUninstallDialog::OnDrawItem(): Entered Method
+20141114-103026.368 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#69 CGPreventUninstallDialog::OnDrawItem(): Exited Method
+20141114-103026.372 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#109 CGPreventUninstallDialog::OnCtlColorStatic(): Entered Method
+20141114-103026.376 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#110 CGPreventUninstallDialog::OnCtlColorStatic(): Exited Method
+20141114-103026.380 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-103026.384 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-103026.463 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#155 CGPreventUninstallDialog::OnNotify(): Entered Method
+20141114-103026.468 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#118 CGPreventUninstallDialog::ExitDialog(): Entered Method
+20141114-103026.473 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#126 CGPreventUninstallDialog::ExitDialog(): Exited Method
+20141114-103026.478 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#174 CGPreventUninstallDialog::OnNotify(): Exited Method
+20141114-103026.483 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#22 CGPreventUninstallDialog::~CGPreventUninstallDialog(): Entered Method
+20141114-103026.489 3.5.223 TID:02884 C D GPreventUninstallDialog.cpp,L#23 CGPreventUninstallDialog::~CGPreventUninstallDialog(): Exited Method
+20141114-103026.500 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#1113 ReportUninstallRecoveryResult(): Entered Method
+20141114-103028.156 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#1151 ReportUninstallRecoveryResult(): Exited Method
+20141114-103034.007 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#328 UploadLogs(): Entered Method
+20141114-103042.371 3.5.223 TID:03668 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103044.999 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#342 UploadLogs(): Exited Method
+20141114-103045.198 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#20 CGUninstallSurveyDialog::CGUninstallSurveyDialog(): Entered Method
+20141114-103045.228 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#24 CGUninstallSurveyDialog::CGUninstallSurveyDialog(): Exited Method
+20141114-103045.280 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#85 CGUninstallSurveyDialog::OnInitDialog(): Entered Method
+20141114-103045.316 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#101 CGUninstallSurveyDialog::OnInitDialog(): Exited Method
+20141114-103045.348 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#108 CGUninstallSurveyDialog::OnCtlColorDlg(): Entered Method
+20141114-103045.404 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#109 CGUninstallSurveyDialog::OnCtlColorDlg(): Exited Method
+20141114-103045.434 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#116 CGUninstallSurveyDialog::OnCtlColorStatic(): Entered Method
+20141114-103045.480 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#117 CGUninstallSurveyDialog::OnCtlColorStatic(): Exited Method
+20141114-103045.528 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#39 CGUninstallSurveyDialog::OnDrawItem(): Entered Method
+20141114-103045.565 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#78 CGUninstallSurveyDialog::OnDrawItem(): Exited Method
+20141114-103149.339 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#231 CGUninstallSurveyDialog::OnCommand(): Entered Method
+20141114-103149.344 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#125 CGUninstallSurveyDialog::ExitDialog(): Entered Method
+20141114-103149.349 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#133 CGUninstallSurveyDialog::ExitDialog(): Exited Method
+20141114-103149.374 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#235 CGUninstallSurveyDialog::OnCommand(): Exited Method
+20141114-103149.410 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#31 CGUninstallSurveyDialog::~CGUninstallSurveyDialog(): Entered Method
+20141114-103149.454 3.5.223 TID:02884 C D GUninstallSurveyDialog.cpp,L#32 CGUninstallSurveyDialog::~CGUninstallSurveyDialog(): Exited Method
+20141114-103149.494 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#477 GetUserMailFromGS(): Entered Method
+20141114-103149.533 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#499 GetUserMailFromGS(): Exited Method
+20141114-103149.613 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#778 ShutDownGingerServices(): Entered Method
+20141114-103149.644 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#669 IsProccessRun(): Entered Method
+20141114-103149.695 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#728 IsProccessRun(): Exited Method
+20141114-103149.727 3.5.223 TID:02884 C I GingerSetupHelper.cpp,L#789 ShutDownGingerServices(): GINGERSERVICES_PROCNAME has been signaled for shutdown.
+20141114-103150.763 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#669 IsProccessRun(): Entered Method
+20141114-103150.787 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#728 IsProccessRun(): Exited Method
+20141114-103151.815 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#669 IsProccessRun(): Entered Method
+20141114-103151.836 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#728 IsProccessRun(): Exited Method
+20141114-103151.840 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#815 ShutDownGingerServices(): Exited Method
+20141114-103152.788 3.5.223 TID:06380 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103215.084 3.5.223 TID:01120 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103215.595 3.5.223 TID:00696 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103215.677 3.5.223 TID:06788 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103254.274 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#512 UninstallReportEvent3(): Entered Method
+20141114-103254.274 3.5.223 TID:06076 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103254.304 3.5.223 TID:03708 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103254.355 3.5.223 TID:00336 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103254.386 3.5.223 TID:06020 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103254.876 3.5.223 TID:02892 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103254.886 3.5.223 TID:06548 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103255.755 3.5.223 TID:01684 C E dllmain.cpp,L#19 InitTrace(): <--************** DEBUG ******************-->
+20141114-103256.031 3.5.223 TID:02884 C D GingerSetupHelper.cpp,L#546 UninstallReportEvent3(): Exited Method

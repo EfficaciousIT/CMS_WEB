@@ -1,0 +1,1056 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs"
+    Inherits="MasterPage2" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>E-smarts</title>
+    <!-- TemplateEndEditable -->
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/templeat.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style12.css" type="text/css">
+    <link rel="stylesheet" href="css/them-color.css" type="text/css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"> </script>
+    <script type="text/javascript" src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="ASPSnippets_Pager.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <style type="text/css">
+        .word
+        {
+            width: 30px;
+            height: 30px;
+            float: left;
+            left: -148px;
+            top: 10px;
+            position: relative;
+        }
+        .excel
+        {
+            width: 30px;
+            height: 30px;
+            float: left;
+            left: -142px;
+            top: 10px;
+            position: relative;
+        }
+        .pdf
+        {
+            width: 30px;
+            height: 30px;
+            float: left;
+            position: relative;
+            top: 4px;
+            left: -146px;
+        }
+        top
+        {
+            width: 1024px;
+            height: 110px;
+        }
+        
+        @charset"utf-8";/* CSS Document */
+        
+             
+        .myCalendar
+        {
+            background-color: #f2f2f2;
+            width: 156px;
+            height: 100px;
+            border: 2px solid White !important;
+            -webkit-box-shadow: 0 0 30px 2px black;
+            border-top: 0px !important;
+        }
+        .myCalendar1
+        {
+            background-color: white;
+            width: 156px;
+            height: 100px;
+            border: 1px solid White !important;
+            /*-webkit-box-shadow: 0 0 30px 2px black;*/
+            border-top: 0px !important;
+        }
+        .myCalendar a,.myCalendar1 a
+        {
+            text-decoration: none;
+            color: White;
+        }
+        .myCalendar .myCalendarTitle,.myCalendar1 .myCalendarTitle,
+        {
+            font-weight: bold;
+            font-size: xx-large;
+            height: 50px;
+            line-height: 50px;
+            background-color:#3c8dbc;
+            color: #ffffff;
+        }
+        .myCalendar th.myCalendarDayHeader
+        {
+            height: 50px;
+            font-size: smaller;
+            color: Black;
+            text-align:center;
+            background-color: #3498db;
+            border-bottom: outset 2px #fbfbfb;
+            border-right: outset 2px #fbfbfb;
+        }
+        .myCalendar1 th.myCalendarDayHeader
+        {
+            height: 50px;
+            font-size: smaller;
+            color: white;
+            text-align:center;
+            background-color: #3498db;
+            border:1px solid white;
+        }
+       
+        .myCalendar td.myCalendarDay
+        {
+            border: 1px solid #fbfbfb;
+        }
+        .myCalendar1 td.myCalendarDay
+        {
+            border: 1px solid #f2f2f2;
+        }
+        .myCalendar1 td.myCalendarDay:nth-child(7),.myCalendar1 td.myCalendarDay:nth-child(6){
+        background-color:#d3ddf9 !important
+        }
+        .myCalendar td.myCalendarDay:nth-child(7),.myCalendar td.myCalendarDay:nth-child(6){
+        background-color:#d3ddf9 !important
+        }
+        .myCalendar1 td.myCalendarDay:nth-child(7) a,.myCalendar1 td.myCalendarDay:nth-child(6) a
+        {
+            /*  color: White !important;*/
+            color: #e81d1d !important;
+                 text-shadow: 1px 1px 5px grey;
+        }
+        .myCalendar td.myCalendarDay:nth-child(7) a,.myCalendar td.myCalendarDay:nth-child(6) a
+        {
+          /*  color: White !important;*/
+            color: #e81d1d !important;
+                 text-shadow: 1px 1px 5px grey;
+        }
+        .myCalendar1 .myCalendarNextPrev
+        {
+            text-align: center;
+            font-size: 40px;
+        }
+        .myCalendar .myCalendarNextPrev,.myCalendar1 .myCalendarNextPrev
+        {
+            text-align: center;
+            font-size: 40px;
+        }
+        .myCalendar .myCalendarNextPrev a,.myCalendar1 .myCalendarNextPrev a
+        {
+            font-size: 13px;
+        }
+        .myCalendar .myCalendarNextPrev:nth-child(1) a,.myCalendar1 .myCalendarNextPrev:nth-child(1) a
+        {
+            color: black !important;
+            background: url("prevMonth.png") no-repeat center center;
+        }
+        .myCalendar .myCalendarNextPrev:nth-child(1) a:hover, .myCalendar .myCalendarNextPrev:nth-child(3) a:hover,
+        .myCalendar1 .myCalendarNextPrev:nth-child(1) a:hover, .myCalendar1 .myCalendarNextPrev:nth-child(3) a:hover
+        {
+            background-color: transparent;
+        }
+        .myCalendar .myCalendarNextPrev:nth-child(3) a,.myCalendar1 .myCalendarNextPrev:nth-child(3) a
+        {
+            color: black !important;
+            background: url("nextMonth.png") no-repeat center center;
+        }
+        .myCalendar td.myCalendarSelector a,.myCalendar1 td.myCalendarSelector a
+        {
+            background-color: #E6C520;
+        }
+        .myCalendar .myCalendarDayHeader a, .myCalendar .myCalendarDay a, .myCalendar .myCalendarSelector a, .myCalendar .myCalendarNextPrev a,
+        .myCalendar1 .myCalendarDayHeader a, .myCalendar1 .myCalendarDay a, .myCalendar1 .myCalendarSelector a, .myCalendar1 .myCalendarNextPrev a
+        {
+            display: inline-block;
+            line-height: 40px;
+        }
+        .myCalendar .myCalendarToday
+        {
+            background-color: #ffd20c !important;
+            /* -webkit-box-shadow: 0 0 7px 3px black;
+            box-shadow: 0 0 7px 3px black; */
+            box-shadow: 1px 1px 6px 2px black;
+                -webkit-box-shadow: 1px 1px 6px 2px black;    
+        }
+        .myCalendar1 .myCalendarToday
+        {
+            background-color: #ffd20c !important;
+            /* -webkit-box-shadow: 0 0 7px 3px black;
+            box-shadow: 0 0 7px 3px black; 
+            box-shadow: 1px 1px 6px 2px black;
+                -webkit-box-shadow: 1px 1px 6px 2px black;*/
+        }
+        .myCalendar .myCalendarToday a,.myCalendar1 .myCalendarToday a
+        {
+            color: #e43d09 !important;
+            font-size: medium;
+        }
+        .myCalendar .myCalendarDay a:hover, .myCalendar .myCalendarSelector a:hover,
+        /*.myCalendar1 .myCalendarDay a:hover, .myCalendar1 .myCalendarSelector a:hover*/
+        {
+            background-color: #DADFDA;
+        }
+        .MyTabStyle .ajax__tab_header
+        {
+            font-family: Verdana;
+            font-size: 13px;            
+            display: block;
+        }
+        .MyTabStyle .ajax__tab_header .ajax__tab_outer
+        {
+            border-color: #222;
+            color: #222;
+            padding-left: 10px;
+            margin-right: 3px;
+            height: 25px;
+            border: solid 1px #d7d7d7;
+            background: #fdfdfd;
+            padding-top: 5px;
+            font-size: 12px;
+        }
+        .MyTabStyle .ajax__tab_header .ajax__tab_inner
+        {
+            border-color: #666;
+            color: #666;
+            padding: 3px 10px 2px 0px;
+        }
+        .MyTabStyle .ajax__tab_hover .ajax__tab_outer
+        {
+            border-color: #222;
+            color: #222;
+            padding-left: 10px;
+            margin-right: 3px;
+            height: 25px;
+            border: solid 1px #d7d7d7;
+            background: #fdfdfd;
+            padding-top: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .MyTabStyle .ajax__tab_hover .ajax__tab_inner
+        {
+            color: #222;
+        }
+        .MyTabStyle .ajax__tab_active .ajax__tab_outer
+        {
+            border-bottom-color: #ffffff;
+            background-color: #FFF;
+            height: 29px;
+            border-radius: 2px 2px 0 0;
+            border: 1px solid #3c8dbc;
+            border-bottom: none;
+            padding-top: 5px;
+            font-size: 15px;
+            font-family: Verdana;
+            cursor: pointer;
+        }
+        .MyTabStyle .ajax__tab_active .ajax__tab_inner
+        {
+            color: #3c8dbc;
+            border-color: #333;
+        }
+        .MyTabStyle .ajax__tab_body
+        {
+            font-family: Verdana;
+            font-size: 10pt;
+            background-color: #fff;
+            border-top-width: 0;
+            border: solid 1px #d7d7d7;
+            border-top-color: #d7d7d7;
+            margin-top:-1px;
+        } 
+        .textcss
+        {
+            font-family: Verdana;
+            font-size: 12px;
+            text-align: left;
+        }
+        .textsize
+        {
+            font-family: Verdana;
+            font-size: 12px;
+        }
+
+         #Success,#Error {
+            position:fixed;
+            top: 100%;
+            left: 85%;
+            width:30em;
+            height:4em;
+            margin-top: -9em; /*set to a negative number 1/2 of your height*/
+            margin-left: -15em; /*set to a negative number 1/2 of your width*/
+            border: 1px solid #ccc;
+        }
+
+        #Error {
+            position:fixed;
+            top: 100%;
+            left: 85%;
+            width:30em;
+            height:auto;
+            margin-top: -9em; /*set to a negative number 1/2 of your height*/
+            margin-left: -15em; /*set to a negative number 1/2 of your width*/
+            border: 1px solid #ccc;
+        }
+        
+    </style>
+    <style type="text/css">
+        .style1 label
+        {
+            display: inline;
+            float: left;
+            color: #000;
+            cursor: pointer;
+            text-indent: 20px;
+            white-space: nowrap;
+        }
+        .style1 input[type=text]
+        {
+            display: block;
+            border: 1px solid #3498db;
+            width: 100%;
+            padding: 5px;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 0px;
+            padding: 6px 0px;
+            font-size: 13px;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .input-blue
+        {
+            width: 100%;
+            border: 1px solid #3498db;
+            margin: 8px 0px;
+            padding: 3px 10px;
+            height: 30px;
+        }
+        .style1 input, form.winner-inside textarea, select
+        {
+            display: block;
+            border: 1px solid #3498db;
+            width: 100%;
+            padding: 5px;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 0px;
+            padding: 6px 0px;
+            font-size: 13px;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .style1 select
+        {
+            display: block;
+            border: 1px solid #3498db;
+            width: 100%;
+            padding: 5px;
+            height: auto !important;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 0px;
+            padding: 6px 0px;
+            font-size: 13px;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .efficacious_send
+        {
+            width: 80% !important;
+            background: #3498db !important;
+            border: none !important;
+            font-size: 16px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 2px;
+            color: #fff;
+            margin: 7px auto !important;
+            padding: 3px;
+            cursor: pointer;
+            height: 28px !important;
+            float: left;
+            text-align: center !important;
+        }
+        .mGrid th
+        {
+            text-align: center !important;
+        }
+        .style1 input[type="radio"]
+        {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="js/script.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition e-smart-themes sidebar-mini" onload="getRequest();">
+    <form id="Form1" runat="server">
+    <div class="wrapper">
+        <header class="main-header"> 
+    <!-- Logo --> 
+    <a href="#" class="logo"> 
+    <!-- mini logo for sidebar mini 50x50 pixels --> 
+    <span class="logo-mini"><img src="img/central_model-logo-sm1.png"></span>
+    <!-- logo for regular state and mobile devices --> 
+    <span class="logo-lg"><img src="img/central_model-logo1.png"></span> </a> 
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation"> 
+      <!-- Sidebar toggle button--> 
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" title="Toggle"> <span class="sr-only">Toggle navigation</span> </a>
+      <div class="navbar-custom-menu space" >
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu" style="display:none;"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope-o"></i> <span class="label label-success">4</span> </a>
+            <ul class="dropdown-menu" style="display:none;">
+              <li class="header">You have 4 messages</li>
+              <li> 
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message --> 
+                    <a href="#">
+                    <div class="pull-left"> <img src="img/photos/avatar3.png" class="img-circle" alt="User Image"> </div>
+                    <h4> Support Team <small><i class="fa fa-clock-o"></i> 5 mins</small> </h4>
+                    <p>Why not buy a new awesome theme?</p>
+                    </a> </li>
+                  <!-- end message -->
+                  <li> <a href="#">
+                    <div class="pull-left"> <img src="img/photos/avatar3.png"class="img-circle" alt="User Image"> </div>
+                    <h4> AdminLTE Design Team <small><i class="fa fa-clock-o"></i> 2 hours</small> </h4>
+                    <p>Why not buy a new awesome theme?</p>
+                    </a> </li>
+                  <li> <a href="#">
+                    <div class="pull-left"> <img src="img/photos/avatar3.png" class="img-circle" alt="User Image"> </div>
+                    <h4> Developers <small><i class="fa fa-clock-o"></i> Today</small> </h4>
+                    <p>Why not buy a new awesome theme?</p>
+                    </a> </li>
+                  <li> <a href="#">
+                    <div class="pull-left"> <img src="img/photos/avatar3.png" class="img-circle" alt="User Image"> </div>
+                    <h4> Sales Department <small><i class="fa fa-clock-o"></i> Yesterday</small> </h4>
+                    <p>Why not buy a new awesome theme?</p>
+                    </a> </li>
+                  <li> <a href="#">
+                    <div class="pull-left"> <img src="img/photos/avatar3.png" class="img-circle" alt="User Image"> </div>
+                    <h4> Reviewers <small><i class="fa fa-clock-o"></i> 2 days</small> </h4>
+                    <p>Why not buy a new awesome theme?</p>
+                    </a> </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu" style="display:none"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell-o"></i> <span class="label label-warning"><asp:Label ID="lblBill" runat="server" Text="0"></asp:Label></span> </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 3 notifications</li>
+              <li> 
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li> <a href="#"> <i class="fa fa-users text-aqua"></i> 1 Notice </a> </li>
+                  <li> <a href="#"> <i class="fa fa-warning text-yellow"></i> 2 Event </a> </li>
+                  <%--<li> <a href="#"> <i class="fa fa-users text-red"></i> 5 new members joined </a> </li>
+                  <li> <a href="#"> <i class="fa fa-shopping-cart text-green"></i> 25 sales made </a> </li>
+                  <li> <a href="#"> <i class="fa fa-user text-red"></i> You changed your username </a> </li>--%>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less --> 
+
+
+         <!-- School name or year --> 
+           <li class="middle_text" style="">
+            <h6 style="color:White;">Year <asp:Label ID="lblAcademicYear" runat="server" Text=""></asp:Label> <%-- Year 2018-19--%></h6>
+          </li>
+
+
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu" style="float:right;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">                
+                  <asp:Image ID="ImgPro" runat="server" src="img/avatar5.png" class="user-image" />
+                  <span class="hidden-xs"><asp:Label ID="lblFullnameNext" runat="server" Text="Label"></asp:Label></span>                 
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">                 
+                    <asp:Image ID="imgProfileImage" runat="server" src="img/avatar5.png" class="img-circle" />
+                    <p>
+                      <h6><asp:Label ID="lblWelComenew" ForeColor="White" runat="server" Text="Label"></asp:Label></h6> 
+                      <h5><asp:Label ID="lblDesignation" ForeColor="White" runat="server"></asp:Label></h5> 
+                      <p><asp:Label ID="lblSchoolName" ForeColor="White" runat="server" Text="Label"></asp:Label></p>
+                                        
+                    </p>
+                  </li>
+                 
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a id="profileview" runat="server" class="btn btn-default btn-flat">Profile</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="index.aspx" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar"> 
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar"> 
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+            <div class="pull-left image">                            
+                <asp:Image ID="ImgProfile" runat="server" src="img/avatar5.png" class="img-circle" />
+            </div>
+            <div class="pull-left info">
+                <p>Hello, <asp:Label ID="lblWelCome" runat="server" Text="Label"></asp:Label></p>  
+                <p><asp:Label ID="lblDesignation1" runat="server" ></asp:Label></p>      
+                             
+            </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="treeview"> <a href="studentDB.aspx" id="Dashboard" runat="server"> <i class="fa"><img src="img/icon-menu/dashboard.png"></i> <span class="span">Dashboard</span> </a> </li>        
+	<li class="treeview"> <a href="frmMessaging.aspx" id="frmMessaging" runat="server"> <i class="fa"><img src="img/icon-menu/message1.png"></i> <span class="span">Messaging</span> </a> </li>        
+       
+        <li class="treeview" id="Master" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/Master.png"></i> <span class="span"> Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+
+           <li class="treeview" id="AssetMaster" runat="server"> <a href="#"> <i class="fa"></i> <span class="span">Asset Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                  <li><a href="frmBuildingMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Building Master</a></li>
+                  <li><a href="frmWingMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Wing Master</a></li>
+                  <li><a href="frmFloorMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Floor Master</a></li>   
+                  <li><a href="frmRoomMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Room Master</a></li>
+                  <li><a href="frmEquipItemMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Item Master</a></li>
+                  <li><a href="frmItemTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Item Details Master</a></li>
+                </ul>            
+            </li>
+
+           <li class="treeview" id="InventoryMaster" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">Inventory Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                   <li><a href="frmSchoolStoreMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Store Master</a></li>
+                   <li><a href="frmSchoolEquipmentMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Equipment Master</a></li>
+                   <li><a href="frmUnitMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Unit Master</a></li>    
+                   <li><a href="frmSchoolInventory.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Inventory Master</a></li>
+                </ul>            
+            </li>
+
+              <li class="treeview" id="FeeMaster" runat="server" visible="false"> <a href="#"> <i class="fa"></i> <span class="span">Fees Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                     <li><a href="frmDurationMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Duration Master</a></li>
+                     <li><a href="frmYearlyMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Yearly Master</a></li>
+                     <li><a href="frmHalfYearlyMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Half Yearly Master</a></li>
+                     <li><a href="frmQuartarlyMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Quarterly Master</a></li>
+                     <li><a href="frmFeeHead.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fee Head</a></li>
+                     <li><a href="frmFeesAssignMst.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fee Chart</a></li>
+                </ul>            
+            </li> 
+
+            <li class="treeview" id="LibraryMaster" runat="server"  > <a href="#"> <i class="fa"></i> <span class="span">Library Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                    <li><a href="frmBookCategory.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Category</a></li>
+                    <li><a href="frmBookLanguage.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Subject</a></li>
+                     <li><a href="frmBookEdition.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Edition</a></li>
+                    <%--<li><a href="frmBookType.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Type</a></li>--%>
+                    <li><a href="frmBookPublicationMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Publication</a></li>
+                    <li><a href="frmBookAuthorMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Author</a></li>
+                    <li><a href="frmBookDetails.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Details</a></li>   
+                  <%--  <li><a href="FrmLibraryCardMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Accession Master</a></li>                    --%>
+                </ul>            
+            </li>
+
+            <li class="treeview" id="SportsMaster" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">Sports Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                   <li><a href="frmSport_Master.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Teacher Master</a></li>
+                   <li><a href="frmSportCard_Master.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Card Master</a></li>
+                   <li><a href="frmSportStore_Master.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Store Master</a></li>    
+                   <li><a href="frmSportEquipment_Master.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Equipment Master</a></li>
+                </ul>            
+            </li>
+          
+           <li class="treeview" id="HostelMaster" runat="server" visible="True" > <a href="#"> <i class="fa"></i> <span class="span">Hostel Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                <li><a href="HostelBuilding.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Building Master</a></li>
+                <li><a href="HostelWing.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Wing Master</a></li>
+                <li><a href="HostelFloor.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Floor Master</a></li>
+                <li><a href="HostelRoom.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Room Master</a></li>  
+                <li><a href="HostelBed.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Bed Master</a></li>  
+                <li><a href="HostelFeeHead.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fee Master</a></li>
+                <li><a href="HostelStudentMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Student Master</a></li>    
+                <li><a href="HostelInquiry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Hostel Inquiry</a></li>   
+              </ul>
+           </li>    
+          
+          <li class="treeview" id="SchoolMaster" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">School Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                  <li><a href="frmSchoolEntry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> School Master</a></li>
+                  <li><a href="frmNetworkAdmMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> SMS Admin Master</a></li>
+                 <%-- <li><a href="frmSMSTemplateMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> SMS Template Master</a></li>--%>
+                  <%--<li><a href="frmModuleMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Module Master</a></li>
+                  <li><a href="frmSubModuleMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Sub-Module Master</a></li>
+                  <li><a href="frmRoleMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Role Master</a></li>--%>
+                  <li><a href="frmAcademicYearMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Academic Year Master</a></li>
+                 <%-- <li><a href="frmIntakeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Intake Master</a></li> 
+                  <li><a href="frmCutOffMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Cut Off Master</a></li>--%>
+                  <li><a href="frmCategoryMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Category Master</a></li>
+                  <li><a href="frmLectureTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Lecture Type Master</a></li>
+                  <li><a href="frmDepartmentMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Department Master</a></li>
+                  <li><a href="frmDesignationMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Designation Master</a></li>
+                  <li><a href="frmExamMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Exam Master</a></li>
+                  <li><a href="frmExamType.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Exam Type Master</a></li>
+                  <li><a href="frmExamSubjectLink.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Exam Passing Criteria</a></li>  
+                  <li><a href="frmLeaveTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Leave Type Master</a></li>
+                  <li><a href="frmHolidayTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Holiday Type Master</a></li>
+                  <li><a href="frmVacationTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Vacation Type Master</a></li>
+                  <li><a href="frmStatusMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Status Master</a></li>
+                  <li><a href="frmSessionMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Session Master</a></li>                 
+                  <li><a href="frmPeriod_Master.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Period Master</a></li>  
+                  <li><a href="frmStandardMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Standard Master</a></li>
+                  <li><a href="frmDivision_master.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Division Master</a></li> 
+                  <li><a href="frmSubject_Entry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Subject Master</a></li>
+                  <li><a href="frmAdmLectureAssign.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Lecture Schedule</a></li>  
+                <%--   <li><a href="frmColasticActivity.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i>Activity Master</a></li>  --%>
+                  <li><a href="frmBloodGroupMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Blood Group Master</a></li>  
+                 <%-- <li><a href="frmGenderMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Gender Master</a></li> --%>
+                  <li><a href="frmCountryMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Country Master</a></li>  
+                  <li><a href="frmStateMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> State Master</a></li>
+                  <li><a href="frmCityMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> City Master</a></li>
+                  <li><a href="frmAdmStudentProfile.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Student Master</a></li> 
+                  <li><a href="frmAdmParentsProfile.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Parent Master</a></li>  
+                  <li><a href="FrmAdmTeacherProfile.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Teacher Master</a></li>
+                  <li><a href="FrmAdminStaffProfile.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Staff Master</a></li>
+                  <li><a href="FrmAdminMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Admin Master</a></li>
+                  <li><a id="Principalpro" runat="server" href="FrmPrincipalMaster.aspx"><i class="fa fa-share"></i>Principal Master</a></li>            
+                  <li><a id="Managerpro" runat="server" href="FrmManagerMaster.aspx"><i class="fa fa-share"></i>Manager Master</a></li>  
+                  <li><a href="frmExamSubjectEntry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i>Exam Subject</a></li>
+                  <li><a href="frmExamAttendanceMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Attendance & Remark Master</a></li>
+                   <li><a href="FrmSkillsEntry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> PT</a></li>
+                  <li><a href="frmWorkHabit.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Work Habit Master</a></li> 
+                  <li><a href="frmPersonalTraits.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Social Habbit</a></li>
+                  <li><a href="frmEnglishActivity.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Arts, Music And Handwritting</a></li>
+                  <%--<li><a href="FrmSkillsEntry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Skill Master</a></li>
+                  <li><a href="frmWorkHabit.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Work Habit Master</a></li> 
+                  <li><a href="frmPersonalTraits.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Personal Traits Master</a></li>
+                  <li><a href="frmEnglishActivity.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> English Activity</a></li>--%>
+<%--                  <li><a href="frmEnglishReader.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> English Reader</a></li>
+                  <li><a href="frmNumberWork.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Number Work</a></li>
+                  <li><a href="frmSecondLanguage.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Second Language Hindi</a></li>
+                  <li><a href="frmSecondLangBengali.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Second Language Bengali</a></li>--%>
+                  <li><a href="frmEVS.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Discipline Master</a></li>
+                  <li><a href="frmComputer.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Co-Scholastics Areas</a></li>
+                  <li><a href="frmActivityMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Activity Master</a></li>
+                  <li><a href="frmElementMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Element Master</a></li>
+               <li><a href="frmsubjectorder.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Subject Update Order </a></li>
+              </ul>
+        </li>  
+
+             <li class="treeview" id="TransportMaster" runat="server" visible="false" > <a href="#"> <i class="fa"></i> <span class="span">Transport Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                    <li><a href="frmTransporterDet.aspx" title="Transporter"><i class="fa fa-arrow-right" aria-hidden="true"></i> Transporter</a></li>
+                    <li><a href="frmRouteDet.aspx" title="Route master"><i class="fa fa-arrow-right" aria-hidden="true"></i> Route Master</a></li>
+                    <li><a href="FrmTripMst.aspx" title="Trip master"> <i class="fa fa-arrow-right" aria-hidden="true"></i>Trip Master</a></li>
+                    <li><a href="BusStopEntry.aspx" title="Bus Stop Entry"><i class="fa fa-arrow-right" aria-hidden="true"></i> Bus Stop Entry</a></li>
+                    <li><a href="frmDriverDetails.aspx" title="Driver Entry"><i class="fa fa-arrow-right" aria-hidden="true"></i> Driver Entry</a></li>
+                </ul>            
+            </li>          
+          </ul>
+        </li>
+        
+        <li class="treeview" id="Admission" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/Admission.png"></i> <span class="span"> Admission</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+            <li><a href="frmNewAdmission.aspx"><i class="fa fa-share"></i> Registration Form</a></li> 
+
+             <!--<li><a href="FrmNewStudentAdmission.aspx" ><i class="fa fa-share"></i> New Student Admission</a></li> -->
+            <%--<li><a href="frmAdmStudentProfile.aspx"><i class="fa fa-share"></i> Student Admission</a></li>--%>          
+          <%--  <li><a href="frmStudentAllotment.aspx"><i class="fa fa-share"></i> Standard Allotment</a></li>
+            <li><a href="frmDivisionWiseAllotment.aspx"><i class="fa fa-share"></i> Division Allotment</a></li>  --%>
+            <li><a href="frmPromotionDemotion.aspx"><i class="fa fa-share"></i> Promotion/Demotion</a></li>  
+             <li><a href="frmAdmissionCancel.aspx"><i class="fa fa-share"></i> Admission Cancelation</a></li>
+             <li><a href="frmTCForm.aspx"><i class="fa fa-share"></i> TC Certificate</a></li>
+             <li><a href="CharacterCertificate2.aspx"><i class="fa fa-share"></i> Character Certificate</a></li>
+               <li><a id="A9" runat="server" visible="false" href="StandardMaster.aspx"><i class="fa fa-share"></i>Fee Master</a></li>
+          </ul>
+        </li>
+        
+         <li class="treeview"> <a id="Feecollection" runat="server" visible="false" href="frmSchoolFeeCollection.aspx"> <i class="fa"><img src="img/icon-menu/payment.png"></i> <span class="span"> Fee Collection</span> </a></li>
+
+        <%--<li class="treeview"> <a id="Payments" runat="server" visible="false" href="frmStudentFeeChart.aspx"> <i class="fa"><img src="img/icon-menu/payment.png"></i> <span class="span"> Payment</span> </a></li>--%>
+        <li class="treeview"> <a id="Payments" runat="server" visible="false" href="frmPayment.aspx"> <i class="fa"><img src="img/icon-menu/payment.png"></i> <span class="span"> Payment</span> </a></li>
+
+        <li class="treeview"> <a href="frmMonthlyAttendance.aspx" id="StudentMonthly" runat="server" visible="false"> <i class="fa"><img src="img/icon-menu/Attendance.png"></i> <span class="span">Attendance</span> </a>  </li>
+
+        <li class="treeview"> <a href="frmMonthlyAttendance.aspx" id="TeacherMonthly" runat="server" visible="false"> <i class="fa"><img src="img/icon-menu/Attendance.png"></i> <span class="span">Attendance</span> <i class="fa fa-angle-left pull-right"></i></a>          
+            <ul class="treeview-menu" style=" display:none">
+            <li id="self" runat="server" visible="true"><a href="frmMonthlyAttendance.aspx"><i class="fa fa-share"></i> Self</a></li>
+            <li id="Teacher" runat="server" visible="true"><a href="frmTeacherAttendance.aspx"><i class="fa fa-share"></i> Teacher</a></li>
+            <li id="Staff" runat="server" visible="true"><a href="frmStaffAttendance.aspx"><i class="fa fa-share"></i> Staff</a></li>
+              
+            <li id="Student" runat="server" visible="true"><a href="frmStudentAttendance.aspx"><i class="fa fa-share"></i> Student</a></li>            
+            <li id="AdminMarkAttendance" runat="server" visible="false"><a href="frmAttendanceMarkAdmin.aspx"><i class="fa fa-share"></i>Admin Mark Attendance</a></li>           
+            <li id="TeacherAttendance" runat="server" visible="false"><a href="frmAttendanceMarkTeacher.aspx"><i class="fa fa-share"></i>Teacher Mark Attendance</a></li>
+            <li id="StaffAttendance" runat="server" visible="false"><a href="frmAttendanceMarkStaff.aspx"><i class="fa fa-share"></i>Staff Mark Attendance</a></li>
+             <li id="MarkAttendance" runat="server" visible="false"><a href="frmAttendanceMark.aspx"><i class="fa fa-share"></i>Student Mark Attendance</a></li>
+           <%-- <li id="UserName" runat="server"><a href="frmAttendanceMark1.aspx"><i class="fa fa-share"></i>Student User Name</a></li>--%>
+            
+          </ul>
+        </li>
+
+         <li class="treeview"> <a id="StuduMod" runat="server"  href="#" visible="false"> <i class="fa"><img src="img/icon-menu/my-study.png"></i> <span class="span"> Study</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">  
+          <li><a id="TeachTimeTable" visible="false" runat="server" href="frmTeacherTimeTable.aspx"><i class="fa fa-share"></i> Timetable</a></li>            
+            <li><a id="TimeTable" runat="server" href="frmStudentTimeTable.aspx"><i class="fa fa-share"></i> Timetable</a></li>            
+            <li><a id="Examination" runat="server" href="frmExaminationSchedule.aspx"><i class="fa fa-share"></i> Examination</a></li>
+            <li><a id="SyllabusMst" runat="server" href="frmSyllabusMst.aspx"><i class="fa fa-share"></i> Syllabus</a></li>
+            <li><a id="Result" runat="server" visible="false" href="frmMarksEntry.aspx"><i class="fa fa-share"></i> Marks Entry</a></li>    
+            <%-- <li><a id="StuResult" runat="server" href="Result.aspx"><i class="fa fa-share"></i> Result</a></li>--%>
+             <li><a id="A1" runat="server" visible="false" href="frmMarkEntryPrimary.aspx"><i class="fa fa-share"></i>Mark Entry Pre Primary</a></li> 
+             <li><a id="A7" runat="server" visible="false" href="MarksEntry1to5.aspx"><i class="fa fa-share"></i>Mark Entry Primary</a></li>                 
+             <li><a id="A2" runat="server" visible="false" href="ResultPrimary.aspx"><i class="fa fa-share"></i>Result Pre Primary</a></li>  
+             <li><a id="A6" runat="server" visible="false" href="Result_I_V.aspx"><i class="fa fa-share"></i>Result Primary</a></li> 
+               <li><a id="A3" runat="server" visible="false" href="frmMarksEntrySecondary.aspx"><i class="fa fa-share"></i>Mark Entry Secondary</a></li>  
+               <li><a id="A4" runat="server" visible="false" href="Result_VI-VIII.aspx"><i class="fa fa-share"></i>Result VI-VIII</a></li> 
+             <li><a id="A5" runat="server" visible="false" href="Result_IX.aspx"><i class="fa fa-share"></i>Result IX-X</a></li>
+             <li><a id="A8" runat="server" visible="false" href="Result_XI_XII.aspx"><i class="fa fa-share"></i>Result XI-XII</a></li>
+          </ul>
+        </li>  
+
+         <li class="treeview" id="Li3" runat="server" visible="false" > <a href="#"> <i class="fa"><img src="img/icon-menu/my-study.png"></i> <span class="span">Online Class</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                      <li><a href="frmadmonlinelectureCreation.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Online Class Timetable </a></li>
+              <li><a href="frmOnlineNotice.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Online Class Details </a></li>
+              </ul>
+        </li>          
+
+        <li class="treeview"> <a id="Sports" runat="server" visible="false" href="frmSportEquipmentAssignment.aspx"> <i class="fa"><img src="img/icon-menu/Sports.png"></i> <span class="span"> Sports</span> </a></li>
+        
+         <li class="treeview" id="Hostel" runat="server" visible="True"> <a href="#"> <i class="fa"><img src="img/icon-menu/Hostel.png"></i> <span class="span"> Hostel</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+            <li><a href="HostelFeeCollection.aspx" title="Transporter"> Fee Collection</a></li>
+            <li><a href="HostelRoomAllotment.aspx" title="Route master"> Room Allotment</a></li>
+            <li><a href="HostelReports.aspx" title="Bus master"> Hostel Reports</a></li>    
+          </ul>
+        </li>
+
+         <li class="treeview" id="profile" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/profile.png"></i> <span class="span"> Profile</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+          <li><a id="AdminPro" runat="server" href="FrmAdminProfile.aspx?successMessage=1"><i class="fa fa-share"></i> Personal</a></li>
+          <li><a  id="TeacherPro" runat="server" href="FrmAdmsTeacherProfile.aspx"><i class="fa fa-share"></i> Teacher</a></li>
+          <li><a  id="StaffPro" runat="server" href="FrmAdmsStaffProfile.aspx"><i class="fa fa-share"></i> Staff</a></li>
+          <li><a id="TeacherselfPro" runat="server" href="FrmTeacherProfile.aspx?successMessage=1"><i class="fa fa-share"></i> Personal</a></li>
+          <li><a id="StudentList" runat="server" href="frmAdmListStudentDetails.aspx"><i class="fa fa-share"></i> Student</a></li>            
+                   
+          </ul>   
+        </li>
+        
+        <li class="treeview"> <a id="StudentPersonalProfile" runat="server" visible="false" href="frmNewStudentProfile.aspx"> <i class="fa"><img src="img/icon-menu/profile.png"></i> <span class="span"> Profile</span> </a></li>
+
+        <li class="treeview"> <a id="NoticeBoard" runat="server" visible="false" href="frmNoticeBoardCreation.aspx"> <i class="fa"><img src="img/icon-menu/noticeboard.png"></i> <span class="span"> Notice Board</span> </a></li>
+        
+        
+        <li class="treeview" id="Transporter" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/Transporter.png"></i> <span class="span"> Transporter</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+            <li><a href="frmVehicleDeviceAssignment.aspx" title="Bus master"> Setting</a></li>   
+            <li><a href="frmAdmStudent_Allocation.aspx" title="Bus stop allocation"> Bus stop allocation</a></li>
+          </ul>
+        </li>
+        
+         <li class="treeview"> <a id="ComplaintSuggestion" runat="server" visible="false" href="frmComplaintEntry.aspx"> <i class="fa"><img src="img/icon-menu/CommentAndSuggation.png"></i> <span class="span"> Complaint & Suggestion</span> </a></li>
+        
+        <li class="treeview" id="Trash" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/Trash.png"></i> <span class="span"> Trash</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+          <%--<li class="treeview" id="Li2" runat="server"> <a href="#"> <i class="fa"></i> <span class="span">Asset Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                 <li><a href="FrmTrashAssetBuildingMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Building Master</a></li>
+                  <li><a href="frmTrashWingMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Wing Master</a></li>
+                  <li><a href="frmTrashFloor.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Floor Master</a></li>   
+                  <li><a href="frmTrashRoom.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Room Master</a></li>
+                  <li><a href="frmTrashAssetEquipItemMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Item Master</a></li>
+                  <li><a href="frmTrashAssetItemTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Item Details Master</a></li>
+                </ul>
+                </li>
+
+                <li class="treeview" id="Li3" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">Inventory Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                   <li><a href="frmTrashInventorySchoolStoreMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Store Master</a></li>
+                   <li><a href="frmTrashInventorySchoolEquipmentMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Equipment Master</a></li>
+                   <li><a href="frmTrashInventoryUnitMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Unit Master</a></li>    
+                   <li><a href="frmTrashInventorySchoolInventory.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Inventory Master</a></li>
+                </ul>            
+            </li>
+
+              <li class="treeview" id="trashfeesmaster" runat="server" visible="false"> <a href="#"> <i class="fa"></i> <span class="span">Fees Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">                   
+                     <li><a href="frmTrashFeesFeeHead.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fee Head</a></li>
+                     <li><a href="frmTrashFeesFeesAssignMst.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fee Chart</a></li>
+                </ul>            
+            </li> 
+            <li class="treeview" id="LibraryTrash" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">Library Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                    <li><a href="frmTrashBookCategory.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Category</a></li>
+                    <li><a href="frmTrashBookLanguage.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Language</a></li>  
+                    <li><a href="frmTrashBookType.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Type</a></li>
+                    <li><a href="frmTrashBookPublication.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Publication</a></li>
+                    <li><a href="frmTrashBookDetails.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Book Details</a></li>   
+                    <li><a href="frmTrashLibCard.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Card Master</a></li>
+                </ul>            
+            </li>
+             <li class="treeview" id="Li5" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">Sports Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class=" treeview-menu">
+                   <li><a href="frmTrashSportTeacher.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Teacher Master</a></li>
+                   <li><a href="frmTrashSportCard.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Card Master</a></li>
+                   <li><a href="frmTrashSportStore.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Store Master</a></li>    
+                   <li><a href="frmTrashSportEquipment.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Equipment Master</a></li>
+                </ul>            
+            </li>--%>
+              <li class="treeview" id="Li1" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">School Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                               
+                  <%--<li><a href="frmTrashRole.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Role Master</a></li>
+                  <li><a href="frmTrashAcademicYear.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Academic Year Master</a></li>--%>
+                 
+                  <li><a href="frmTrashSchoolCategoryMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Category Master</a></li>
+                  <li><a href="frmTrashLectureType.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Lecture Type Master</a></li>
+                  <li><a href="frmTrashDepartment.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Department Master</a></li>
+                  <li><a href="frmTrashDesignation.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Designation Master</a></li>
+                  <li><a href="frmTrashExam.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Exam Master</a></li>
+                  <li><a href="frmTrashExamType.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Exam Type Master</a></li>
+                  <li><a href="frmTrashExamSubjectLink.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Exam Passing Criteria</a></li>  
+                  <li><a href="frmTrashLeaveType.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Leave Type Master</a></li>
+                  <li><a href="frmTrashSchoolHolidayTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Holiday Type Master</a></li>
+                  <li><a href="frmTrashSchoolVacationTypeMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Vacation Type Master</a></li>
+                  <li><a href="frmTrashStatusMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Status Master</a></li>
+                  <%--  <li><a href="frmTrashSession.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Session Master</a></li>    --%>             
+                  <li><a href="frmTrashPeriod.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Period Master</a></li>  
+                  <li><a href="frmTrashStandardMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Standard Master</a></li>
+                  <li><a href="frmTrashDivision.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Division Master</a></li> 
+                  <li><a href="frmTrashSchoolSubject_Entry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Subject Master</a></li>
+                  <li><a href="frmTrashAdmLectureAssign.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Lecture Schedule</a></li>  
+                  
+                  <li><a href="frmTrashBloodGroupMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Blood Group Master</a></li>  
+                 <%-- <li><a href="frmTrashGenderMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Gender Master</a></li> --%>
+                  <li><a href="frmTrashCountryMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Country Master</a></li>  
+                  <li><a href="frmTrashStateMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> State Master</a></li>
+                  <li><a href="frmTrashCityMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> City Master</a></li>
+                  <li><a href="frmTrashStudentMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Student Master</a></li>
+                   <li><a href="frmTrashTeacherMaster.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Teacher Master</a></li>
+               <%--   <li><a href="frmTrashSchoolAdmStudentProfile.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Student Master</a></li> 
+                  <li><a href=".aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Parent Master</a></li>  
+                  <li><a href=".aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Teacher Master</a></li>
+                  <li><a href=".aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Staff Master</a></li>
+                  <li><a href=".aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Admin Master</a></li>   --%>                         
+               
+              </ul>
+              </li>
+                <li class="treeview" id="Li4" runat="server" > <a href="#"> <i class="fa"></i> <span class="span">Study</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+              <li><a href="frmTrashAdmLectureAssign.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Timetable </a></li>  
+              <%--<li><a href="frmTrashSyllabusMst.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Syllabus </a></li> --%> 
+              </ul> 
+              </li> 
+          <%-- <li class="treeview" id="HostelTrash" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/profile.png"></i> <span class="span">Hostel Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                    <li><a href="frmTrashHostelBuilding.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Building Master</a></li>
+                    <li><a href="frmTrashHostelWing.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Wing Master</a></li>
+                    <li><a href="frmTrashHostelFloor.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Floor Master</a></li>
+                    <li><a href="frmTrashHostelRoom.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Room Master</a></li>  
+                    <li><a href="frmTrashHostelBed.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Bed Master</a></li>  
+                    <li><a href="frmTrashHostelFeeHead.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fee Master</a></li>
+                    <li><a href="frmTrashHostelStudent.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Student Master</a></li>    
+                    <li><a href="frmTrashHostelInquiry.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Hostel Inquiry</a></li>  
+              </ul>
+        </li>            
+     
+           <li class="treeview" id="TransporterTrash" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/profile.png"></i> <span class="span">Sports Master</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class=" treeview-menu">
+                   <li><a href="frmTrashSportTeacher.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Teacher Master</a></li>
+                   <li><a href="frmTrashSportCard.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Card Master</a></li>
+                   <li><a href="frmTrashSportStore.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Store Master</a></li>    
+                   <li><a href="frmTrashSportEquipment.aspx"><i class="fa fa-arrow-right" aria-hidden="true"></i> Equipment Master</a></li>
+              </ul>            
+          </li>  --%>            
+          </ul>            
+            </li> 
+            
+        <%--<li class="treeview"> <a id="ChanegePassword" runat="server" visible="true" href="frmChanegePassword.aspx"> <i class="fa"><img src="img/icon-menu/profile.png"></i> <span class="span"> Setting</span> </a></li>--%>
+       
+       <li class="treeview" id="Setting" runat="server" visible="false"> <a href="#"> <i class="fa"><img src="img/icon-menu/Setting.png"></i> <span class="span">Setting</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+          
+            <li><a href="frmChanegePassword.aspx"><i class="fa fa-share"></i> Change Password</a></li>
+            <li><a id="PromotionsAll" runat="server" href="frmRoleWisePromotion.aspx" visible=false><i class="fa fa-share"></i> Promotions</a></li>
+           <%-- <li><a id="AssignModu" runat="server" href="frmModuleAssignment.aspx"><i class="fa fa-share"></i> Assign Module</a></li>
+             <li><a id="AssignModulDetails" visible="false" runat="server" href="frmModuleDetails.aspx"><i class="fa fa-share"></i> Assign Details</a></li>--%>
+            
+          </ul>
+        </li>  
+
+        <li class="treeview"> <a id="Calendar" runat="server" visible="false" href="#"> <i class="fa"><img src="img/icon-menu/Calendar.png"></i> <span class="span">Calendar</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+          
+            <li><a href="frmHolidayMst.aspx"><i class="fa fa-share"></i> Holiday</a></li>
+            <li><a href="frmVacationMst.aspx"><i class="fa fa-share"></i> Vacation</a></li>
+          </ul>
+        </li>   
+        
+        <li class="treeview"> <a href="#" id="Leave" runat="server" visible="false"> <i class="fa"><img src="img/icon-menu/Leave.png"></i> <span class="span">Leave</span> <i class="fa fa-angle-left pull-right"></i> </a>          
+            <ul class="treeview-menu">
+            <li id="TeacherLeave" runat="server" visible="true"><a href="frmTeacherLeaveMenu.aspx"><i class="fa fa-share"></i> Apply Leave</a></li>
+            <li id="TeacherApproval" runat="server" visible="true"><a href="frmTeachLeavAppro.aspx"><i class="fa fa-share"></i> Leave Approval</a></li>
+            <li id="StudentLeave" runat="server" visible="true"><a id="StudentLeaveLink" runat="server" visible="true" href="frmStudentLeaveMenu.aspx"><i class="fa fa-share"></i> Apply Leave</a></li>
+            <li id="PlanLeave" runat="server" visible="false"><a href="frmPlanLeave.aspx"><i class="fa fa-share"></i> Planned Leave</a></li>            
+          </ul>
+        </li> 
+        
+        <li class="treeview"> <a id="liabrary" runat="server" visible="false" href="frmBookDetails.aspx"> <i class="fa"><img src="img/icon-menu/library.png"></i> <span class="span"> Library</span> </a>
+        <ul class="treeview-menu">
+            <li><a id="LinBookself" runat="server" href="frmBookDetails.aspx"><i class="fa fa-share"></i> Book Details</a></li>
+             <li><a id="LinBookCardAss" runat="server" visible="false" href="#"><i class="fa fa-share"></i> Library Card Assignment</a></li>
+            <li><a id="LinBookAssStu" runat="server" visible="true" href="frmBookAssign.aspx"><i class="fa fa-share"></i> Book Assign to Student</a></li>
+           <%-- <li><a id="LinBookCardAss" runat="server" href="frmCardAssignment.aspx"><i class="fa fa-share"></i> Library Card Assignment</a></li>
+            <li><a id="LinBookAssStu" runat="server" href="frmBookAssign.aspx"><i class="fa fa-share"></i> Book Assign to Student</a></li>--%>  
+            <li><a id="LinBookAssTeacher" runat="server" visible="true" href="frmBookAssignToTeacher.aspx"><i class="fa fa-share"></i> Book Assign to Teacher</a></li>
+          </ul>
+        </li>
+          
+        <li class="treeview"> <a id="AsstAssignment" runat="server" visible="false" href="frmAssetAssignment.aspx"> <i class="fa"><img src="img/icon-menu/AssetAssignment.png"></i> <span class="span"> Asset Assignment</span> </a></li>
+       
+       <li class="treeview"> <a id="Inventory" runat="server" visible="false" href="frmStockCheck.aspx"> <i class="fa"><img src="img/icon-menu/InventoryManagement.png"></i> <span class="span"> Inventory Management</span> </a></li>
+
+        <li class="treeview"> <a id="InquiryReception" runat="server" visible="false" href="frmInquiryReception.aspx"> <i class="fa"><img src="img/icon-menu/Enquiry.png"></i> <span class="span"> Enquiry</span> </a></li>
+       
+        <li class="treeview" id="MyDiary" runat="server" visible="false"> <a id="MyDiarylink" runat="server" href="frmMyDiary.aspx"> <i class="fa"><img src="img/icon-menu/MyDiary.png"></i> <span class="span"> My Diary</span> </a>
+          
+        </li>
+        
+        <li class="treeview"> <a id="Bus" runat="server" visible="false" href="frmBusTracking.aspx"> <i class="fa"><img src="img/icon-menu/Service.png"></i> <span class="span"> Bus Service</span> </a></li>
+        
+        <li class="treeview" id="Reports" runat="server" visible="false"> <a href="#"> &nbsp;<i class="fa"><img src="img/icon-menu/Reports.png"></i><span class="span">Report Center</span> <i class="fa fa-angle-left pull-right"></i> </a>
+          <ul class="treeview-menu">
+          <li><a id="LoginReport" runat="server" href="LoginDetails.aspx"><i class="fa fa-share"></i> Login Details</a></li>
+          <li><a id="frmAdmListStudentDetails" href="frmAdmListStudentDetails.aspx" runat="server"><i class="fa fa-share"></i> Student Details</a></li>
+         <%-- <li><a href="frmSMSRpt.aspx"><i class="fa fa-share"></i> SMS Details</a></li>--%>
+          <li><a id="frmMobileDetails" runat="server" href="frmMobileDetails.aspx"><i class="fa fa-share"></i>Mobile Details</a></li>
+          <%-- <li><a href="frmStandardWiseRpt.aspx"><i class="fa fa-share"></i> Student Fee Collection</a></li>
+            <li><a href="frmRPTFeecollectionInDate.aspx"><i class="fa fa-share"></i> Date wise Fee Collection</a></li>
+            <li><a href="frmHeadwiseFeeRpt.aspx"><i class="fa fa-share"></i> Head wise Fee Collection</a></li>--%>
+            <li><a id="frmStudentAttendance" runat="server" href="frmStudentAttendance.aspx"><i class="fa fa-share"></i> Student Attendance</a></li>            
+         <%--   <li><a href="frpRptStdWise.aspx"><i class="fa fa-share"></i> Standard wise fee Collection</a></li>   
+            <li><a href="frmFeePaidTillDate.aspx"><i class="fa fa-share"></i> Fee collection till date</a></li> --%>
+            <li><a id="Report1" runat="server"  href="frmAbsentSummary.aspx"><i class="fa fa-share"></i> Student Attendence Summary</a></li>   
+            <li><a id="Report4" runat="server" href="frmAttendanceSummary.aspx"><i class="fa fa-share"></i> Staff Attendance Summary</a></li>         
+            <li><a id="Report2" runat="server"  href="frmGenderwiseAttendence.aspx"><i class="fa fa-share"></i> Gender Wise Absent Summary</a></li>
+            <li><a id="Report3" runat="server"  href="frmTopScoresStudent.aspx"><i class="fa fa-share"></i> Top 10 Scores Student</a></li> 
+            <li><a id="TeacherWiseTimeTable" runat="server" href="TeacherWiseTimeTable.aspx"><i class="fa fa-share"></i>Teacher Wise Time Table</a></li> 
+            <li><a id="StudentWiseTimeTable" runat="server" href="StudentWiseTimeTable.aspx"><i class="fa fa-share"></i>Student Wise Time Table</a></li> 
+            <li><a id="frmStudentPresentAbsentSummary" runat="server" href="frmStudentPresentAbsentSummary.aspx"><i class="fa fa-share"></i>Student Present Absent Count</a></li> 
+            <li><a id="frmTCdeatail" runat="server" href="frmTCdeatail.aspx"><i class="fa fa-share"></i>TC Detail Report </a></li>
+            <li><a id="CCdetails" runat="server" href="CCdetails.aspx"><i class="fa fa-share"></i>Character Certificate Detail Report </a></li>  
+            <li><a id="bookDetailsReport" runat="server" href="frmBookDetailsReport.aspx"><i class="fa fa-share"></i>Book Detail Report </a></li> 
+            <li><a id="bookHistoryReport" runat="server" href="frmBookHistoryReport.aspx"><i class="fa fa-share"></i>Book History Report </a></li> 
+              <li><a id="A10" runat="server"  href="frmstudfeecollection.aspx"><i class="fa fa-share"></i> Re-Admission Fee Report</a></li>
+                                  
+          </ul>
+        </li>        
+      </ul>
+    </section>
+    <!-- /.sidebar --> 
+  </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <!-- Main content -->
+       
+      <!-- Small boxes (Stat box) -->
+     <div class="col-lg-12 no-padding" style="display:none">
+     <select class="pull-right dropdown-student">
+  <option value="volvo">Rakesh Bhosle</option>
+  <option value="saab">Naresh Bhosle</option>
+</select>
+</div>
+<div class="clearfix"></div>
+      
+      <!-- TemplateBeginEditable name="head" -->
+      
+      
+      
+      
+      
+      <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+            </asp:ToolkitScriptManager>
+    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+      
+      
+      <!-- TemplateEndEditable -->
+
+      
+
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer"> <strong>Copyright &copy; 2014-2015.</strong> All rights reserved. 
+        <span class="pull-right">Designed and developed by :<a href="http://efficacious.co.in/" target=_blank> EFFICACIOUS INDIA LTD.</a></span></footer>
+        <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+        <div class="control-sidebar-bg">
+        </div>
+    </div>
+    <div class="alert alert-success alert-dismissible" id="Success" style="display:none;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <span><i class="fa fa-check" aria-hidden="true" style="font-size: 20px;"> Record Saved Successfully</i></span>
+    </div>
+
+    <div class="alert alert-warning" style="display:none;">
+      <span><i class="icon-warning-sign" aria-hidden="true" style="font-size: 20px;"> Record Saved Successfully</i></span>
+    </div>
+
+    <div class="alert alert-error alert-dismissible" id="Error" style="display:none;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <span><i class="fa fa-exclamation-triangle" aria-hidden="true" style="font-size: 20px;"> Something went wrong</i></span>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- esmart App -->
+    <script src="js/app.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="js/jquery.slimscroll.min.js"></script>
+    </form>
+</body>
+</html>

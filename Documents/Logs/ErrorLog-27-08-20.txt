@@ -1,0 +1,12 @@
+-----------Exception Details on  27-08-2020 14:35:08-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 27-08-2020 14:35:08
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://e-smarts.net/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+

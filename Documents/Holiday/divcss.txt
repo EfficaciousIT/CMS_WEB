@@ -1,0 +1,1 @@
+  <div class="efficacious" style="background: linear-gradient(White, graytext);width:90%;height:40px">

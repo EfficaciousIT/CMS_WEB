@@ -1,0 +1,10 @@
+Requirements 
+
+1) Showing one report in which students who attended different bus than assingned
+to them  
+
+2) Indicate notification that bus halt for a long time (Need Report Also)
+
+3) Adhaar Number Require in Profile
+
+4) Training Should Be in All Language

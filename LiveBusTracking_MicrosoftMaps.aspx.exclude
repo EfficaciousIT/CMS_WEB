@@ -1,0 +1,193 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/newMasterPage.master" AutoEventWireup="true"
+    CodeFile="LiveBusTracking_MicrosoftMaps.aspx.cs" Inherits="LiveBusTracking_MicrosoftMaps" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <script type="text/javascript" src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3"></script>
+
+    <script type="text/javascript">
+        var map;
+        function LoadMap() {
+            map = new VEMap('BingMap');
+            var latlong = new VELatLong(28.63576, 77.22445);
+            map.SetDashboardSize(VEDashboardSize.Large);
+            map.LoadMap(latlong, 9, VEMapStyle.Road);
+            //Add pushpin
+            var pin = new VEShape(VEShapeType.Pushpin, latlong);
+            pin.SetCustomIcon(null);
+            pin.SetTitle("New Delhi");
+            pin.SetDescription("Capital City Of India");
+            map.AddShape(pin);
+            map.ShowDashboard();
+
+        }
+
+        function WayPoints() {
+            //     alert('inside waypoint');
+            map = new VEMap('BingMap');
+            map.LoadMap();
+            map.SetMapMode(VEMapMode.Mode2D);
+            map.SetMapStyle(VEMapStyle.Road);
+            var latlngsplit = new Array();
+            var latlngsplit1 = new Array();
+            var url_data = document.getElementById("<%= HiddenField1.ClientID%>").value;
+
+            if (url_data != null && url_data != '') {
+                latlngsplit = url_data.split('#&');
+                arrlength = latlngsplit.length - 1;
+
+                var latlng = new Array();
+                var ll;
+                var startlatlon = latlngsplit[0].split("#");
+                var startlat, startlon, startlocation;
+                var endlocation;
+                startlat = startlatlon[0];
+                startlon = startlatlon[1];
+                startlocation = startlatlon[2];
+                //loop 1
+                for (var p = 0; p < latlngsplit.length; p++) {
+                    if (latlngsplit[p] != null) {
+                        var latlngtemp = latlngsplit[p].split("#");
+
+                        // ll = new GLatLng(latlngtemp[0], latlngtemp[1]);
+                        ll = new VELatLong(latlngtemp[0], latlngtemp[1]);
+                        endlocation = latlngtemp[2];
+                        latlng.push(ll);
+                    } //end if
+                } // end for
+
+                var demo = new Array();
+                var count = latlngsplit.length - 2;
+                //alert(count);
+                demo = latlngsplit[count].split("#");
+                endlat = demo[0]
+                endlong = demo[1];
+
+                //set center
+                var currentloc = new VELatLong(endlat, endlong);
+                var initView = new VEMapViewSpecification(currentloc, 14, 1000, -90, 0)
+                map.SetMapView(initView);
+                //adding line 
+                var myShapeLayer = new VEShapeLayer();
+                map.AddShapeLayer(myShapeLayer);
+                var myShape = new VEShape(VEShapeType.Polyline, latlng);
+                //Set the line color
+                var lineColor = new VEColor(254, 0, 0, .5);
+                myShape.SetLineColor(lineColor);
+
+                //Set the line width
+                var lineWidth = Math.round(3);
+                myShape.SetLineWidth(lineWidth);
+                myShape.HideIcon();
+                myShapeLayer.AddShape(myShape);
+                //adding marker(pushpin)
+
+                //for start point
+                var startaddress = startlocation;
+                var first = 'Start';
+                var startpin = new VEShape(VEShapeType.Pushpin, latlng[0]);
+                startpin.SetTitle(first);
+                //startpin.SetDescription(startaddress);
+                map.AddShape(startpin);
+                var currentMarkerID = "images/busIcon.png";
+                startpin.SetCustomIcon(currentMarkerID);
+                //for endpoint
+                var endaddress = endlocation;
+                var last = 'Current Location';
+                var endpin = new VEShape(VEShapeType.Pushpin, currentloc);
+                endpin.SetTitle(last);
+                endpin.SetDescription(endaddress);
+                map.AddShape(endpin);
+                endpin.SetCustomIcon(currentMarkerID);
+
+
+                var busarrlength;
+                var buslatlngsplit = new Array();
+                var buslatlngsplit1 = new Array();
+
+                var stop_data = document.getElementById("<%= hdnStops.ClientID%>").value;
+
+
+                if (stop_data != null && stop_data != '') {
+                    buslatlngsplit = stop_data.split('#&');
+                    //arrlength = buslatlngsplit.length - 1;
+                    var buslatlng = new Array();
+                    var busll;
+
+                    for (var p = 0; p < buslatlngsplit.length - 1; p++) {
+                        if (buslatlngsplit[p] != null) {
+                            var latlngtemp = buslatlngsplit[p].split("#");
+                            busll = new VELatLong(latlngtemp[0], latlngtemp[1]);
+                            //for busstop
+                            var busStopMarkerID = "images/Bus_Stop_ Sign.png";
+                            var busstopaddress = latlngtemp[2];
+                            var currentbustop = 'Bus Stop';
+                            var busstoppin = new VEShape(VEShapeType.Pushpin, busll);
+                            busstoppin.SetTitle(currentbustop);
+                            busstoppin.SetDescription(busstopaddress);
+                            map.AddShape(busstoppin);
+                            busstoppin.SetCustomIcon(busStopMarkerID);
+                        } //end if
+                    } // end for
+                }
+
+
+            }
+        }
+    </script>
+
+    <table width="922" style="margin-top: -10px;">
+        <tr height="25">
+            <td align="left" width="100" style="padding-left: 20px;">
+                <b>Auto Refresh:</b>
+            </td>
+            <td align="left" width="822">
+                <asp:CheckBox ID="chkrefresh" AutoPostBack="true" runat="server" Checked="True" OnCheckedChanged="chkrefresh_CheckedChanged" />
+            </td>
+        </tr>
+    </table>
+    <div id='BingMap' style="position: relative; width: 922px; margin: 0 auto; height: 450px;
+        top: 0px; left: 0px;">
+    </div>
+    <center>
+        <table width="922">
+            <tr>
+                <td align="center">
+                    <asp:HiddenField ID="HiddenField1" runat="server"></asp:HiddenField>
+                    <asp:HiddenField ID="hdnStops" runat="server" />
+                    <asp:Timer ID="timer1" Enabled="true" runat="server" OnTick="timer1_Tick" Interval="9000">
+                    </asp:Timer>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <cc1:DragPanelExtender ID="drag1" runat="server" TargetControlID="Panel1" DragHandleID="Panel2">
+                    </cc1:DragPanelExtender>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <asp:Panel ID="Panel1" runat="server" CssClass="outerPanel" Style="z-index: 10000;">
+        <table align="left">
+            <tr>
+                <td style="cursor: move; background-color: #fff; padding: 0 10px; border: 1px solid #ccc;">
+                    <div id="Panel2" runat="server">
+                        <img src="images/drag.png" name="Dragable Panel" alt="Dragable Panel" /></div>
+                </td>
+                <td>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" PageSize="1"
+                        CssClass="mGrid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
+                        <Columns>
+                            <asp:BoundField DataField="DeviceNumber" HeaderText="Device" ItemStyle-Font-Size="Small" />
+                            <asp:BoundField DataField="vchVehicle_no" HeaderText="Vehicle" ItemStyle-Font-Size="Small" />
+                            <asp:BoundField DataField="Location" HeaderText="Location" ItemStyle-Font-Size="Small" />
+                            <asp:BoundField DataField="dtdatetime" HeaderText="DateTime" ItemStyle-Font-Size="Small" />
+                            <asp:BoundField DataField="speed" HeaderText="Speed" ItemStyle-Font-Size="Small" />
+                        </Columns>
+                    </asp:GridView>
+                </td>
+            </tr>
+        </table>
+    </asp:Panel>
+</asp:Content>

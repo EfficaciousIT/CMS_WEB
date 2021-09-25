@@ -1,0 +1,60 @@
+-----------Exception Details on  05-11-2020 09:16:48-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2020 09:16:48
+Error Line No : line 96
+Error Message: HttpException
+Exception Type: System.Web.HttpException
+Error Location : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'intStudent_id'.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  05-11-2020 09:18:08-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2020 09:18:08
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  05-11-2020 09:29:06-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2020 09:29:06
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  05-11-2020 09:31:51-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2020 09:31:51
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  05-11-2020 09:34:51-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2020 09:34:51
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+

@@ -1,0 +1,47 @@
+10:30:24 11-14-2014: Start Logging 'Ginger 3.5.223'  setup 
+10:30:24 [I] OnBegin: Enter function
+10:30:24 [I] OnBegin: CMDLINE: 
+10:30:24 [I] OnBegin: ISReleaseFlags: RFLAG_FLASH_INTERNET,RFLAG_TTS,SS_CHROME_ADDIN,SS_FFX_ADDIN
+10:30:24 [I] DetectGITWindowParam: Enter function
+10:30:24 [I] DetectGITWindowParam: No GIT window handle is supplied.
+10:30:24 [I] DetectGITWindowParam: Exit function
+10:30:24 [I] OnBegin: Exit function
+10:30:24 [I] OnMaintUIBefore: Enter function
+10:30:24 [I] SetGingerBitmap: Enter function
+10:30:24 [I] SetGingerBitmap: Exit function
+10:30:24 [I] RecoverMachineInTest: Enter function
+10:30:24 [I] KillClient: Enter function
+10:30:24 [W] KillClient: Failed to locate application window.
+10:30:24 [I] KillClient: Exit function
+10:30:24 [I] SdRecoverMachine: Enter function
+10:30:26 [I] SdRecoverMachine: Exit function
+10:30:28 [I] RecoverMachineInTest: Exit function
+10:30:45 [I] SdUninstallSurveyQuest: Enter function
+10:31:49 [I] SdUninstallSurveyQuest: Exit function
+10:31:49 [I] GetUserEmailFromGS: Enter function
+10:31:49 [I] GetUserEmailFromGS: Ginger User e-mail: sandhyasweet777@gmail.com
+10:31:49 [I] GetUserEmailFromGS: Exit function
+10:31:49 [I] KillClient: Enter function
+10:31:49 [W] KillClient: Failed to locate application window.
+10:31:49 [I] KillClient: Exit function
+10:31:49 [I] ShutdownGingerServices: Enter function
+10:31:51 [I] ShutdownGingerServices: Exit function
+10:31:51 [I] RegisterAddIns: Enter function
+10:31:51 [I] IsSeamlessOn: Enter function
+10:31:51 [I] IsSeamlessOn: Exit function
+10:31:52 [I] RegisterAddIns: Exit function
+10:31:52 [I] RegisterGingerServices: Enter function
+10:31:52 [I] RegisterGingerServices: Exit function
+10:31:52 [I] StopGingerUpdateService: Enter function
+10:31:52 [E] StopGingerUpdateService: GingerUpdateService is not installed!
+10:31:52 [I] StopGingerUpdateService: Exit function
+10:31:52 [I] OnMaintUIBefore: Exit function
+10:32:46 [I] OnMaintUIAfter: Enter function
+10:32:54 [I] ReportSuccess: Enter function
+10:32:56 [I] ReportSuccess: Reporting UninstallReportEvent
+10:32:56 [I] ReportSuccess: Exit function
+10:32:56 [I] OnMaintUIAfter: Exit function
+10:32:56 [I] OnEnd: Enter function
+10:32:56 [I] UpdateTinyInstallerProgress: Enter function
+10:32:56 [I] UpdateTinyInstallerProgress: Exit function
+10:32:56 [I] OnEnd: Exit function

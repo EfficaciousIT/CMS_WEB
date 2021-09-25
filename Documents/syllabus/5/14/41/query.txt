@@ -1,0 +1,172 @@
+http://myservices.relianceada.com/captureDTHInstantPayment.do
+200840050317
+
+http://www.flipkart.com/raymond-cotton-checkered-shirt-fabric/p/itme8z4kfxgnjzxt?pid=FABE8Z4KBGNKDRJR&al=kGzlL%2F48E1XNFBmcxtZDVMldugMWZuE70QgRNOqbsYbZcvmFBzWRa%2BqY4ooNWqGyoIxQ4vkWAlU%3D&ref=L%3A-3099654953427319647&srno=b_72
+
+
+DECLARE @Monthname VARCHAR(500) 
+DECLARE @monthNo int 
+Declare @month VARCHAR(500) 
+DECLARE db_cursor CURSOR FOR
+SELECT MonthName 
+FROM tblStartMonthMaster 
+WHERE intschool_id=1  
+set @monthNo=2
+set @Monthname=NULL
+OPEN db_cursor   
+FETCH NEXT FROM db_cursor INTO @Monthname  
+WHILE @monthNo <= 12   
+BEGIN   
+	   Print 'Loop started'
+	   print @Monthname
+       if @Monthname=NULL
+       Begin
+			print 'Inside'
+			set @Monthname =(select MonthName from tblStartMonthMaster where monthNo=@monthNo)
+			print @Monthname
+       End
+       Else
+       Begin
+			print 'Outside'
+			set @Monthname =@Monthname+','+(select MonthName from tblStartMonthMaster where monthNo=@monthNo)
+			print @Monthname
+			print @monthNo
+       ENd
+       
+	   set @monthNo=@monthNo+1
+	   
+
+END   
+select @Monthname as Monthname
+--set @month=(select @Monthname as Monthname)
+--print @month
+CLOSE db_cursor   
+DEALLOCATE db_cursor
+
+
+********************************************************************************************************
+
+Alter procedure usp_getMonthHorizontal
+(
+	@intschool_id varchar(50)=null
+)
+As
+Begin
+
+
+SET NOCOUNT ON
+DECLARE @Monthname VARCHAR(500) 
+DECLARE @monthNo int 
+DECLARE db_cursor CURSOR FOR  
+SELECT MonthName 
+FROM tblStartMonthMaster 
+WHERE intschool_id=@intschool_id  
+set @monthNo=2
+set @Monthname=NULL
+OPEN db_cursor   
+FETCH NEXT FROM db_cursor INTO @Monthname  
+WHILE @monthNo <= 12   
+BEGIN   
+	   Print 'Loop started'
+	   print @Monthname
+       if @Monthname=NULL
+       Begin
+			print 'Inside'
+			set @Monthname =(select MonthName from tblStartMonthMaster where monthNo=@monthNo)
+			print @Monthname
+       End
+       Else
+       Begin
+			print 'Outside'
+			set @Monthname =@Monthname+','+(select MonthName from tblStartMonthMaster where monthNo=@monthNo)
+			print @Monthname
+			print @monthNo
+       ENd
+       
+	   set @monthNo=@monthNo+1
+	   
+
+END   
+select @Monthname as Monthname
+CLOSE db_cursor   
+DEALLOCATE db_cursor
+
+End
+
+declare @MonthName varchar(500)
+select @MonthName=usp_getMonthHorizontal @intschool_id='1'
+
+---------------------
+sp_tables '%student%'
+
+select vchstudentfirst_name,intstudent_id from Student_Master where intschool_id='1'
+
+sp_helptext usp_FeesAssignSTD
+
+select * from tblStartMonthMaster
+
+select * from tbl_FeesAssignSTD
+
+select * from tblFeeReceive
+
+insert into tblStartMonthMaster(MonthName,monthNo,intschool_id) 
+
+values ('May','12','1') 
+
+SELECT *
+FROM (
+    	SELECT 
+        MonthName,monthNo
+		FROM tblStartMonthMaster where intschool_id=1
+		--,'' as June,'' as  July,'' as  August,'' as  September, 
+  --      '' as  October,'' as  November,'' as  December,'' as  January,'' as  February,'' as  March,'' as  April,'' as  May 
+) as s
+PIVOT
+(
+    SUM(monthNo)
+    FOR [MonthName] IN (June, July, August, September, 
+    October, November, December, January, February, March, April, May)
+)AS p
+
+
+
+
+
+Select intFeeDetId,intFee_Id, intSTD_Id,vchStandard_name,vchFee,feetype,case when feetype='2' then 'Installment' else 'Annual' end  feetype, 
+case when feetype='2' then numAmount*3 else numAmount End as numAmount--,sum(numAmount*12)
+from tbl_FeesAssignSTD    
+inner join tblFeeDesc on tblFeeDesc.intTutionId=tbl_FeesAssignSTD.intFee_Id    
+inner join tblstandard_master on intstandard_id=intSTD_Id    
+where tblFeeDesc.intSchool_Id=1 and tbl_FeesAssignSTD.intSchool_Id=1 and tblstandard_master.intschool_id=1    
+and tblFeeDesc.btActiveFlg=1 and tbl_FeesAssignSTD.bitActiveFlg=1 and tbl_FeesAssignSTD.intSTD_Id=5 
+
+--group by intFeeDetId,intFee_Id, intSTD_Id,vchStandard_name,vchFee,numAmount,feetype
+
+select  * from tbl_FeesAssignSTD where intFeeDetId='29' --where vchfee='Computer Fees'   
+update tbl_FeesAssignSTD set numamount='1000' where intFeeDetId='16'
+select * from tblFeeDesc where vchfee='Development Fee' 
+
+create table tblfeecollection
+(
+	intID int identity(1,1) ,
+	intFeeHeadID int null,
+	intAmount numeric(18,0) null,
+	intMonth int null,
+	intSchool_id int null	
+)
+
+
+sp_tables '%divi%'
+
+select vchstudentfirst_name,intstudent_id,vchStandard_name,vchStandard_name+'/'+vchDivisionName as vchStandard_name 
+from Student_Master inner join tblstandard_master on Student_Master.intstanderd_id=tblstandard_master.intstandard_id inner join 
+tblDivision_master on Student_Master.intDivision_id=tblDivision_master.intDivision_id where Student_Master.intschool_id=1
+
+
+sp_help 
+
+select 
+
+select intAddmission_id,intstudent_id from Student_Master where intDivision_id=40
+
+update Student_Master set intAddmission_id=372 where intstudent_id=372

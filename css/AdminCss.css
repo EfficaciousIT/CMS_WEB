@@ -1,0 +1,399 @@
+﻿body{ font-family:Verdana; margin:0; padding:0;}
+.wrapper{ width:100%; height:auto;}
+p{ margin:5% 0%;}
+.pagewrapper{ max-width:1024px; height:auto;  margin:0 auto;}
+.lable {
+width: 53%;
+margin-top: 4px;
+height: 25px !important;
+padding: 5px 5px 0 0;
+background: #999;
+text-align: center;
+color: #fff;
+font-family:Verdana;
+font-size: Medium;
+font-size: 15px;
+float: left;
+}
+.NewCss {
+width: 53%;
+margin-top: 4px;
+height: 25px !important;
+padding: 5px 5px 0 0;
+border-radius: 11px 11px 0 0 ;
+background: #F9AE0E;
+text-align: center;
+color: #fff;
+font-family:Verdana;
+font-size: Medium;
+font-size: 15px;
+float: left;
+}
+.dashboard-left{ width:20%; height:auto; padding:0 1%; float:left;}
+.dashboard-right{ width:76%; padding:0 1%; float:left;}
+.total-students{ width:100%; height:auto; float:left; background:#3abec0; padding:2%; font-size:24px; color:#fff; text-align:center; text-transform:capitalize;}
+.total-students label{ font-size:50px !important;  padding:4% 0;}
+.total-admin{ width:100%; height:auto; float:left; background:#3498db; padding:2%; font-size:24px; color:#fff; text-align:center; text-transform:capitalize;}
+.total-admin label{ font-size:50px !important;  padding:4% 0;}
+.total-staff{ width:100%; height:auto; float:left; background:#3abec0; padding:2%; font-size:24px; color:#fff; text-align:center; text-transform:capitalize;}
+.total-staff label{ font-size:50px !important;  padding:4% 0;}
+.total-department{ width:100%; height:auto; float:left; background:#3498db; padding:2%; font-size:24px; color:#fff; text-align:center; text-transform:capitalize;}
+.total-department label{ font-size:50px !important;  padding:4% 0;}
+.present-staff{ width:46%; height:200px; float:left; margin:0 1%; background:#3498db; padding:1%; text-align:center; font-size:16px; color:#fff;}
+.event-calender{ width:46%; height:300px; float:left; margin:0 1%; background:#3498db; padding:1%; text-align:center; font-size:16px; color:#fff;}
+.staff-attendence{ width:46%; height:300px; float:left; margin:0 1%; background:#3498db; padding:1%; text-align:center; font-size:16px; color:#fff;}
+.clearfix{ clear:both; margin:3% auto;}
+.staff-std{ width:48%; height:auto; padding:1%; float:left; margin:5% 0;}
+.staff-div{ width:48%; height:auto; padding:1%; float:left; margin:5% 0;}
+.staff-div select{ width:100%; background:#56772e; height:30px; color:#fff; font-size:14px; padding-left:10px; border:1px solid #fff}
+.staff-std select{ width:100%; background:#56772e;  height:30px; color:#fff; font-size:14px; padding-left:10px;  border:1px solid #fff }
+table{ border:0px solid #3498db;}
+tr td{ border:0px solid #3498db;font-size:11px; font-family:Verdana;}
+th{ font-size:10px; font-family:Verdana;}
+
+
+ .mGrid
+        {
+            width: 100%;
+            background-color: #fff;
+            border: solid 0px #525252;
+            border-collapse: collapse;
+            font: 11px Verdana, Helvetica, sans-serif;
+            
+        }
+        .mGrid td
+        {
+           
+            border: solid 1px #c1c1c1;
+            color: #717171;
+           
+        }
+        .mGrid th
+        {
+            padding: 4px 2px;
+            color: #fff;
+            background: #3498db;
+            border-left: solid 1px #525252;
+            font-size: 0.9em;
+            font: 12px verdana;
+            height: 29px;
+        }
+        .mGrid tr
+        {
+            height: 21px;
+        }
+        .mGrid .alt
+        {
+            background: #fff;
+        }
+        .mGrid .pgr
+        {
+            background: #424242;
+        }
+        .mGrid .pgr table
+        {
+            margin: 5px 0;
+        }
+        .mGrid .pgr td
+        {
+            border-width: 0;
+            padding: 0 6px;
+            border-left: solid 0px #666;
+            font-weight: bold;
+            color: #fff;
+            line-height: 12px;
+        }
+        .mGrid .pgr a
+        {
+            color: #666;
+            text-decoration: none;
+        }
+        .mGrid .pgr a:hover
+        {
+            color: #000;
+            text-decoration: none;
+        }
+        
+           .efficacious label
+        {
+            display: block;
+            height: auto;
+            padding: 10px 0px;
+            font-size: 18px;
+            border: 1px solid #242424;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            margin-bottom: 10px;
+            width: 120px;
+            color: #000;
+        }
+        #efficacious
+        {
+            background: #e5e5e5;
+            border-radius: 7px;
+            height: 30px;
+            padding: 2px;
+            width: 90%;
+            margin-bottom: 5px;
+        }
+        .efficacious span
+        {
+            display: block;
+            height: auto;
+            padding: 10px 0px;
+            font-size: 12px;
+            margin: 2% 5%;
+            padding: 2%;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            margin-bottom: 10px;
+            width: 120px;
+            color: #000;
+        }
+        
+        .efficacious input[type="image"] {
+           border:0px;
+           padding:0px;
+           
+        }
+        
+        .efficacious input, form.winner-inside textarea
+        {
+            display: block;
+            border: 1px solid #50AD40;
+            width: 100%;
+            padding: 5px;
+            font-family: 'verdana';
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+            padding: 6px 0px;
+            font-size: 13px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .efficacious input.winner-inside
+        {
+            width: 100%;
+            background: #ffff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .efficacious select
+        {
+            width: 100%;
+            border: 1px solid #50AD40;
+            padding: 2px 5px;
+            height: 26px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .efficacious textarea
+        {
+            width: 100%;
+            border: 1px solid #50AD40;
+            padding: 5px 5px;
+            height: 32px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .efficacious input.efficacious_send
+        {
+           
+            background: #97c00e;
+            border: 1px solid #00000;
+            font-size: 16px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            color: #fff; border:none;
+          
+            padding: 3px;
+            cursor: pointer;
+            height: 35px;
+            float: left;
+            text-align: center;
+        }
+        .efficacious input[type=checkbox]:checked + label:after
+        {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+        
+        
+        .efficacious input[type=checkbox], input[type=radio]
+{
+      display          : block;
+    width            : 1.1em;
+    height           : 1.3em;
+    border           : 0.0625em solid rgb(192,192,192);
+    border-radius    : 0.25em;
+    background       : black;
+
+    
+    vertical-align   : middle;
+    line-height      : 1em;
+    font-size        : 14px;
+}
+
+.efficacious label
+{
+    display: inline;
+    float: left;
+    color: #000;
+    cursor: pointer;
+    text-indent: 20px;
+    white-space: nowrap;
+}
+
+.efficacious input[type=checkbox] + label
+{
+    display          : block;
+    width            : 1.1em;
+    height           : 0.3em;
+    border           : 0.0625em solid rgb(192,192,192);
+    border-radius    : 0.25em;
+    background       : black;
+
+    
+    vertical-align   : middle;
+    line-height      : 1em;
+    font-size        : 14px;
+}
+
+
+
+.efficacious input[type=radio] + label  
+{
+    display          :block;
+    width            : 8em;
+    height           : 1em;
+    border           : 0.0625em solid rgb(192,192,192);
+    border-radius    : 5px;
+    background       : rgb(211,168,255);
+    background-image : -moz-linear-gradient(rgb(240,240,240),rgb(211,168,255));
+    background-image : -ms-linear-gradient(rgb(240,240,240),rgb(211,168,255));
+    background-image : -o-linear-gradient(rgb(240,240,240),rgb(211,168,255));
+    background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(211,168,255));
+    background-image : linear-gradient(rgb(240,240,240),rgb(211,168,255));
+    vertical-align   : middle;
+    line-height      : 1em;
+    font-size        : 14px;
+}
+
+
+.efficacious input[type=radio] {
+  width: 18px !important;
+  height: 18px !important;
+  background: #f5f5f5 !important; margin-top: 10px !important;
+}
+.myCalendar
+        {
+            border-left: 2px solid White !important;
+	border-right: 2px solid White !important;
+	border-bottom: 2px solid White !important;
+	background-color: #f2f2f2;
+            -webkit-box-shadow: 0 0 30px 2px black;
+            border-top-style: none !important;
+	border-top-color: inherit !important;
+	border-top-width: 0px !important;
+}
+        .myCalendar a
+        {
+            text-decoration: none;
+            color: White;
+            width:18px;
+        }
+        .myCalendar .myCalendarTitle
+        {
+            font-weight: bold;
+            font-size: x-large;
+            height: 30px;
+            line-height: 15px;
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        .myCalendar th.myCalendarDayHeader
+        {
+            height: 10px;
+            width: 10px;
+            font-weight: normal;
+            font-size: xx-small	;
+            color: Black;
+            background-color: #ADA9A9;
+            border-bottom: outset 1px #fbfbfb;
+            border-right: outset 1px #fbfbfb;
+        }
+        .myCalendar td.myCalendarDay
+        {
+            border: outset 2px #fbfbfb;
+        }
+        .myCalendar td.myCalendarDay:nth-child(7) a
+        {
+            color: White !important;
+            height:7px;
+            width:5px;
+        }
+        .myCalendar .myCalendarNextPrev
+        {
+            text-align: left;
+            font-size: 10px;
+        }
+        .myCalendar .myCalendarNextPrev a
+        {
+            font-size: 10px;
+        }
+        .myCalendar .myCalendarNextPrev:nth-child(1) a
+        {
+            color: black !important;
+            background: url("prevMonth.png") no-repeat center center;
+        }
+        .myCalendar .myCalendarNextPrev:nth-child(1) a:hover, .myCalendar .myCalendarNextPrev:nth-child(3) a:hover
+        {
+            background-color: transparent;
+        }
+        .myCalendar .myCalendarNextPrev:nth-child(3) a
+        {
+            color: black !important;
+            background: url("nextMonth.png") no-repeat center center;
+        }
+        .myCalendar td.myCalendarSelector a
+        {
+            background-color: #E6C520;
+        }
+        .myCalendar .myCalendarDayHeader a, .myCalendar .myCalendarDay a, .myCalendar .myCalendarSelector a, .myCalendar .myCalendarNextPrev a
+        {
+            display: inline-block;
+            line-height: 10px;
+            width:8px;
+            font-size: 10px;
+        }
+        .myCalendar .myCalendarToday
+        {
+            background-color: #8FC74A;
+            -webkit-box-shadow: 0 0 7px 3px black;
+            box-shadow: 0 0 7px 3px black;
+        }
+        .myCalendar .myCalendarToday a
+        {
+            color: white !important;
+            font-size: medium;
+        }
+        .myCalendar .myCalendarDay a:hover, .myCalendar .myCalendarSelector a:hover
+        {
+            background-color: #DADFDA;
+        }
+        
+        

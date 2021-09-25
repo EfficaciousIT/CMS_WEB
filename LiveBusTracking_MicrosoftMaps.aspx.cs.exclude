@@ -1,0 +1,145 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+
+public partial class LiveBusTracking_MicrosoftMaps :DBUtility
+{
+    static string strConSBTS = ConfigurationManager.ConnectionStrings["esms"].ConnectionString.ToString();
+    string devicenumber,patch_timing_id;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            Session["School_id"] = "1";
+            if (Session["School_id"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                //devicenumber = Request.QueryString["device"].ToString().Trim();
+                //patch_timing_id = Request.QueryString["?timingid"].ToString().Trim();
+                WayPoints();
+                if (devicenumber != null)
+                {
+                    //gridbind();
+                    if (!IsPostBack)
+                    {
+                        WayPoints();
+
+                    }
+                    else
+                    {
+                        if (chkrefresh.Checked == false)
+                        {
+                            timer1.Enabled = false;
+                            WayPoints();
+                        }
+
+                    }
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            
+            
+        }
+        
+    }
+
+
+    public void gridbind()
+    {
+        try
+        {
+        //    string qry = "select 'View' as [Tracking],ltrim(rtrim(DeviceNumber)) as DeviceNumber,vchVehicle_no,Location,dtdatetime,speed from SBTS_LatestRec  join  SBTS_Vehicle_det on SBTS_LatestRec.intVehicle_id=SBTS_Vehicle_det.intVehicle_id  where devicenumber='" + devicenumber + "'";
+        //    DataTable dt = sGetDatatable(qry, "", strConSBTS);
+        //    GridView1.DataSource = dt;
+        //    GridView1.DataBind();
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+    }
+
+    protected void timer1_Tick(object sender, EventArgs e)
+    {
+        try
+        {
+            timer1.Enabled = false;
+            WayPoints();
+            timer1.Enabled = true;
+        }
+        catch (Exception ex)
+        {
+
+
+        }
+    }
+
+    public void WayPoints()
+    {
+        HiddenField1.Value = "";
+        hdnStops.Value = "";
+        try
+        {
+            DataTable dt;
+            string sQuery;
+            //for Line no L 1
+            //sQuery = "exec [usp_live] @devicenumber= '" + devicenumber + "'";
+            //sQuery = "select Waypnt_lat,Waypnt_long,Waypnt_name,Waypnt_Num from IOCL_Waypointsdet_Online where waypnt_Cat = 'TPNo' and Line_no='L 1' order by Waypnt_num asc";// order by Waypnt_lat,Waypnt_long asc"; //order by Waypnt_id asc
+            sQuery = "select latitude,longitude from tblLatestRec"; //order by Waypnt_id asc
+            DataSet ds = sGetDataset(sQuery);
+            dt = ds.Tables[0];
+            if (dt != null && dt.Rows[0][0].ToString() != "")
+            {
+                HiddenField1.Value = dt.Rows[0][0].ToString().Trim();
+
+            }
+            //string sQuery1;
+            //sQuery1 = "declare @vchdata varchar(max) set @vchdata=''  select @vchdata=@vchdata+Convert(varchar,stop_lat,128)+'#'+Convert(varchar,stop_long,128)+'#'+stop_name+'#&'     from SBTSPatch_Sch_Det join SBTSStop_master on    SBTSPatch_Sch_Det.stop_id=SBTSStop_master.stop_id      where patch_timing_id='" + patch_timing_id + "' select @vchdata";
+
+            //DataTable dt1 = sGetDatatable(sQuery1, "", strConSBTS);
+
+            //if (dt1 != null && dt1.Rows[0][0].ToString() != "")
+            //{
+            //    hdnStops.Value = dt1.Rows[0][0].ToString().Trim();
+            //}
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "ClientScript", "WayPoints();", true);
+        }
+        catch
+        {
+        }
+
+    }
+
+
+    protected void chkrefresh_CheckedChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (chkrefresh.Checked == true)
+            {
+                timer1.Enabled = true;
+                WayPoints();
+            }
+        }
+        catch (Exception ex)
+        {
+            
+            
+        }       
+
+    }
+
+    
+}

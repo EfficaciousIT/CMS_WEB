@@ -1,0 +1,85 @@
+-----------Exception Details on  21-01-2020 10:14:02-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 10:14:02
+Error Line No : ine 111
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://e-smarts.net/centralmodel/frmexcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  21-01-2020 10:17:29-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 10:17:29
+Error Line No : ine 111
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://localhost:63431/e-SMS1/frmexcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  21-01-2020 10:17:46-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 10:17:46
+Error Line No : ine 111
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://localhost:63431/e-SMS1/frmexcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  21-01-2020 10:19:26-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 10:19:26
+Error Line No : ine 111
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://localhost:63431/e-SMS1/frmexcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  21-01-2020 11:48:04-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 11:48:04
+Error Line No : ine 111
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  21-01-2020 12:20:16-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 12:20:16
+Error Line No : ine 111
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  21-01-2020 13:33:15-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-01-2020 13:33:15
+Error Line No : ine 371
+Error Message: ArgumentOutOfRangeException
+Exception Type: System.ArgumentOutOfRangeException
+Error Location : 'ddlBookId' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Page Url: http://e-smarts.net/centralmodel/frmBookAssign.aspx
+
+--------------------------------*End*------------------------------------------
+
+

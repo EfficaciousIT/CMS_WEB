@@ -1,0 +1,228 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head runat="server">
+    <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>E-SMS</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%-- <link href="css/style.css" rel="stylesheet" type="text/css">--%>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="sty/styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <script src="sty/script.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <!--Header Start-->
+        <div class="main_body">
+            <div class="main_innerbody">
+                <!-- Header Main Start -->
+                <div id="header">
+                    <div style="float: left;">
+                        <img src="images/banner.png" alt="" title="" border="0"></div>
+                </div>
+            </div>
+            <div style="clear: both;">
+            </div>
+            <!--Navigation Start-->
+            <div id="navigation_bg">
+                <div id="navigation">
+                    <div id="content_navi">
+                        <div id="cssmenu">
+                            <ul>
+                                <li><a href="#" title="Home" class="active">Home</a></li>
+                                <li id="mailAttendance" runat="server" visible="false"><a href="#" title="Attaindance">
+                                    Attendance</a>
+                                    <ul>
+                                        <li id="frmattendance" runat="server" visible="false"><a href="frmAttendance.aspx">Month-wise</a>
+                                            <ul>
+                                                <li id="frmSelfAttendance" runat="server" visible="false"><a href="frmAttendance.aspx">
+                                                    Self</a></li>
+                                                <li id="frmStudentAttendance" runat="server" visible="false"><a href="frmStudentAttendance.aspx">
+                                                    Student</a></li>
+                                                <li id="frmTeacherAttendance" runat="server" visible="false"><a href="frmTeacherAttendance.aspx">
+                                                    Teacher</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="frmabsent" runat="server" visible="false"><a href="frmAbsentReport.aspx">Absent
+                                            days</a>
+                                            <ul>
+                                                <li id="frmselfAbsent" runat="server" visible="false"><a href="frmAbsentReport.aspx">
+                                                    Self</a></li>
+                                                <li id="frmstudentabsent" runat="server" visible="false"><a href="frmStudentAbsent.aspx">
+                                                    Student</a></li>
+                                                <li id="frmTeacherAbsent" runat="server" visible="false"><a href="frmTeacherAbsent.aspx">
+                                                    Teacher</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="frmlate" visible="false" runat="server"><a href="frmLatedays.aspx">Late days</a>
+                                            <ul>
+                                                <li id="frmselflate" runat="server" visible="false"><a href="frmLatedays.aspx">Self</a></li>
+                                                <li id="frmstudentLate" runat="server" visible="false"><a href="frmStudentLateDays.aspx">
+                                                    Student</a></li>
+                                                <li id="frmTeacherLate" runat="server" visible="false"><a href="frmTeacherLateDays.aspx">
+                                                    Teacher</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="frmTeacherRemark" visible="false" runat="server"><a id="frmTechRemark" runat="server"
+                                            href="frmStudentTeacherRemark.aspx">Teacher remarks</a>
+                                            <ul>
+                                                <li id="frmTeacherRemarkEntry" runat="server" visible="false"><a href="frmTeacherRemarkEntry.aspx">
+                                                    Remark Entry</a></li>
+                                                <li id="frmViewRemark" runat="server" visible="false"><a href="frmStudentTeacherRemark.aspx">
+                                                    View Remark</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="frmcard" visible="false" runat="server"><a href="frmCard.aspx" title="Identity Card">
+                                            Identity Card</a></li>
+                                    </ul>
+                                </li>
+                                <li id="frmmainleave" runat="server" visible="false"><a id="frmleave" runat="server"
+                                    href="frmStudentLeaveMenu.aspx" title="Leave">Leave</a>
+                                    <ul>
+                                        <li id="frmselfLeave" runat="server" visible="false"><a href="frmTeacherLeaveMenu.aspx"
+                                            title="Leave Approval">Self</a></li>
+                                        <li id="frmstudentLeave" runat="server" visible="false"><a id="frmstudentTeacherLeave"
+                                            href="frmTeachLeavAppro.aspx" runat="server" title="Leave Approval">Leave Approval</a></li>
+                                    </ul>
+                                </li>
+                                <li id="frmcalender" runat="server" visible="false"><a href="#" title="Attaindance">
+                                    Calender</a>
+                                    <ul>
+                                        <li id="frmholiday" runat="server" visible="false"><a href="frmHolidayMst.aspx" title="Holiday">
+                                            View Holiday</a></li>
+                                        <li id="frmvcation" runat="server" visible="false"><a href="frmVacationMst.aspx"
+                                            title="Holiday">View Vacation</a></li>
+                                        <li id="frmtraining" runat="server" visible="false"><a href="frmTraningMst.aspx"
+                                            title="Leave">Training</a></li>
+                                    </ul>
+                                </li>
+                                <li id="services" runat="server"><a href="#" title="Services">Services</a>
+                                    <ul>
+                                        <li><a href="frmBusTracking.aspx" title="Bus Service">Bus Service</a>
+                                            <ul>
+                                                <li id="frmTracking" runat="server" visible="false"><a href="frmBusTracking.aspx"
+                                                    title="Bus Tracking">Bus Tracking</a></li>
+                                                <li id="BMaster" runat="server" visible="false"><a href="#" title="Master">Master</a>
+                                                    <ul>
+                                                        <li><a href="frmTransporterDet.aspx" title="Transporter">Transporter</a></li>
+                                                        <li><a href="frmRouteDet.aspx" title="Route master">Route Master</a></li>
+                                                        <li><a href="FrmTripMst.aspx" title="Trip master">Trip Master</a></li>
+                                                        <li><a href="frmVehicleDeviceAssignment.aspx" title="Bus master">Bus Entry</a></li>
+                                                        <li><a href="BusStopEntry.aspx" title="Bus Stop Entry">Bus Stop Entry</a></li>
+                                                        <li><a href="frmDriverDetails.aspx" title="Driver Entry">Driver Entry</a></li>
+                                                        <li><a href="frmAdmStudent_Allocation.aspx" title="Bus stop allocation">Bus stop allocation</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li id="frmListOfStudTkBusService" runat="server" visible="false"><a href="frmListOfStudTkBusService.aspx"
+                                                    title="Master">Student Details</a></li>
+                                                <li id="frmTripwiseStudentRpt" runat="server" visible="false"><a href="frmTripwiseStudentRpt.aspx"
+                                                    title="Master">Travell Details</a> </li>
+                                                <li id="frmPreSchoAbseBus" runat="server" visible="false"><a href="frmPreSchoAbseBus.aspx"
+                                                    title="Master">Absent Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="frmpackageNotification.aspx" title="Holiday">Notification packages</a></li>
+                                        <li><a href="frmDownloadApp.aspx" title="Leave">Download App</a></li>
+                                        <li><a href="frmNoticeBoardCreation.aspx" title="Leave">Notice Board </a></li>
+                                    </ul>
+                                </li>
+                                <li id="frmMessage" runat="server"><a hreftitle="Message">Message</a>
+                                    <ul>
+                                        <li><a href="frmGroupMst.aspx" title="">Manage Group</a></li>
+                                        <li><a href="frmMemberMst.aspx" title="">Manage Members</a></li>
+                                        <li><a href="frmSendGroupMsg.aspx" title="">Send Message</a></li>
+                                    </ul>
+                                </li>
+                                <li id="payment" runat="server" visible="false"><a href="#" title="payment">Payment</a>
+                                    <ul>
+                                        <li><a href="frmBusTracking.aspx" title="Bus Service">School Fee</a></li>
+                                        <li><a href="frmpackageNotification.aspx" title="Other Fee">Other Fee</a>
+                                            <ul>
+                                                <li><a href="frmLostCardFee.aspx" title="">Lost Identity card fee</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="frmStudentTrainingReq.aspx" title="Leave">Services Fee</a>
+                                            <ul>
+                                                <li><a href="frmbuspaymentdisplay.aspx" title="">Bus service</a></li>
+                                                <li><a href="frmPackagePayment.aspx" title="">Package service</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="mainprofile" runat="server"><a href="frmStudentProfile.aspx" title="View Profile">
+                                    View Profile</a>
+                                    <ul>
+                                        <li><a runat="server" id="frmSelfProfile" visible="false" href="frmStudentProfile.aspx"
+                                            title="">Self</a></li>
+                                        <li><a runat="server" id="frmStudentProfile" visible="false" title="">Student</a></li>
+                                        <%--<li runat="server" id="frmTeacherProfile" visible="false"><a href="frmPackagePayment.aspx"
+                                            title="">Teacher</a></li>--%>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="Setting">Setting</a>
+                                    <ul>
+                                        <li><a href="frmChanegePassword.aspx">Change password</a></li>
+                                        <li><a href="FrmParentsLog.aspx">Login logs</a></li>
+                                        <li id="frmcardAssignment" runat="server" visible="false"><a href="frmAdmCardAssig.aspx">
+                                            Card Assigment</a></li>
+                                        <li id="frmsession" runat="server" visible="true"><a href="frmSessionMaster.aspx">Session
+                                            Master</a></li>
+                                        <li id="frmStandard" runat="server" visible="true"><a href="frmStandardMaster.aspx">
+                                            Standard Master</a></li>
+                                        <li id="frmDivision" runat="server" visible="true"><a href="frmDivision_master.aspx">
+                                            Standard Master</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="index/Default.aspx" title="Setting">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+                    <script>
+                        google.load("jquery", "1.3.1");
+                        google.setOnLoadCallback(function() {
+                            // Just for demonstration purposes, change the contents/active state using jQuery
+                            $("#menu ul li a").click(function(e) {
+                                e.preventDefault();
+
+                                $("#menu ul li a").each(function() {
+                                    $(this).removeClass("active");
+                                });
+
+                                $(this).addClass("active");
+
+                                $("h3").html($(this).attr("title"));
+                            });
+                        });
+                    </script>
+
+                </div>
+                <!-- Navigation End -->
+            </div>
+        </div>
+        <!--Header ENd-->
+        <div style="clear: both; padding: 0 0 0 30px">
+            <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+            </asp:ToolkitScriptManager>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

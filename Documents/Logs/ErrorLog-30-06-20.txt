@@ -1,0 +1,36 @@
+-----------Exception Details on  30-06-2020 12:50:06-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 30-06-2020 12:50:06
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  30-06-2020 12:52:01-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 30-06-2020 12:52:01
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  30-06-2020 12:54:01-----------------
+-------------------------------------------------------------------------------------
+Log Written Date: 30-06-2020 12:54:01
+Error Line No : ine 119
+Error Message: ThreadAbortException
+Exception Type: System.Threading.ThreadAbortException
+Error Location : Thread was being aborted.
+Error Page Url: http://www.e-smarts.net/centralmodel/frmExcel.aspx
+
+--------------------------------*End*------------------------------------------
+
+

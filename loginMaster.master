@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="loginMaster.master.cs"
+    Inherits="loginMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <title>E-SMARTs</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script>
+        $(document).ready(function() {
+            $('#login-trigger').click(function() {
+                $(this).next('#login-content').slideToggle();
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+                else $(this).find('span').html('&#x25BC;')
+            })
+        });
+    </script>
+    <script language="javascript" type="text/javascript">
+        function TopicValidation() {
+            var drpUserType = document.getElementById("<%=drpUserType.ClientID %>").value;            
+            var txtUserName = document.getElementById("<%=txtUserName.ClientID %>").value;            
+            var txtPassword = document.getElementById("<%=txtPassword.ClientID %>").value;            
+            if (drpUserType == '---Select---') {
+                alert('Please Select User Type');
+                return false;
+            }
+            if (txtUserName == '') {
+                alert('Please Enter Username');
+                return false;
+            }
+            else if (txtPassword.trim() == '') {
+                alert('Please Enter Password');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</head>
+<body style="background: #f5f5f5;">
+    <form id="form1" runat="server">
+    <div class="minibar">
+        <div class="minibar_container">
+            <div class="top-social">
+                <div class="contact">
+                   <a href="https://www.facebook.com/efficacioustech?fref=ts" target="_blank" > <img src="img/social-icon/facebook.jpg"  title="efficacious facebook" /></a>
+                     <a href="https://www.linkedin.com/company/efficacious?" target="_blank" > <img src="img/social-icon/linkedin.jpg" title="efficacious linkedin" /></a>
+                   <a href="https://plus.google.com/109018947605678135012/photos" target="_blank" >   <img src="img/social-icon/googleplus.jpg" title="efficacious googleplus" /></a>
+                    <a href="https://twitter.com/EfficaciousTec" target="_blank" >  <img src="img/social-icon/twitter.jpg" title="efficacious twitter" /></a>
+                </div>
+                <div class="top-link">
+                    <ul class="eff">
+                        <li id="login"><a id="login-trigger" href="#">Log in </a>
+                            <div id="login-content">
+                                <fieldset id="inputs" style="border: none;">
+                                    <%--<select name="drpUserType" id="drpUserType" class="w-select">
+                                        <option value="---Select---">---Select---</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Teacher">Teacher</option>
+                                        <option value="Staff">Staff</option>
+                                        <option value="Administrator">Administrator</option>
+                                    </select>--%>
+                                    <asp:DropDownList ID="drpUserType" CssClass="w-select" runat="server">
+                                        <asp:ListItem>---Select---</asp:ListItem>
+                                        <asp:ListItem>Student</asp:ListItem>
+                                        <asp:ListItem>Parent</asp:ListItem>
+                                        <asp:ListItem>Teacher</asp:ListItem>
+                                        <asp:ListItem>Staff</asp:ListItem>
+                                        <asp:ListItem>Administrator</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:TextBox ID="txtUserName" runat="server" class="w-input" placeholder="User name"></asp:TextBox>
+                                    <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" class="w-input"
+                                        placeholder="Password"></asp:TextBox>
+                                </fieldset>
+                                <fieldset id="actions">
+                                    <%--<input type="submit" id="submit" value="Log in">--%>
+                                    <asp:Button ID="btnSubmit" TabIndex="1" OnClientClick="return TopicValidation();"
+                                        OnClick="btnSubmit_Click" CssClass="w-button" runat="server" Text="Log in" Font-Bold="true">
+                                    </asp:Button>
+                                    <!--<label><input type="checkbox" checked="checked"> Keep me signed in</label>-->
+                                </fieldset>
+                            </div>
+                        </li>
+                    </ul>
+                    <strong></strong>
+                </div>
+            </div>
+            <!--top-social -->
+        </div>
+        <!--minibar_container -->
+    </div>
+    <!--minibar -->
+    <div class="clearfix">
+    </div>
+    <div class="wrapper">
+        <div class="pagewrapper">
+            <div class="logo">
+                <div class="esmart">
+                    <img src="img/logo/logo.png" width="194" height="57" alt="emart" /><br />
+                    <font style="font-size: 10px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                        Student Management and Remote Tracking System</font>
+                </div>
+                <div class="email">
+                    <div class="call-number">
+                        <img align="left" style="padding-right: 10px;" src="img/social-icon/call.png" />:
+                        +91-22-49707524</div>
+                    <div class="clearfix">
+                    </div>
+                    <div class="email-info">
+                        <img align="left" style="padding-right: 10px;" src="img/social-icon/email.png" />:
+                        info@efficacious.co.in</div>
+                </div>
+                <div class="efficacious-logo">
+                    <img src="img/logo/efficacious-log.png" width="200" height="70" alt="efficacious" /></div>
+            </div>
+            <div class="clearfix">
+            </div>
+            
+            <!--pagewrapper -->
+        </div>
+        <!--wrapper-end -->
+        <div class="clearfix">
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <div class="footer_container">
+                <div class="copyright">
+                    ©2015 . All Rights Reserved by Efficacious India Limited</div>
+                <div class="privacypolicy">
+                    Disclaimer | Privacy Policy | Terms & Conditions</div>
+            </div>
+        </div>
+
+        <script src="jquery/jquery.min.js"></script>
+
+        <script src="jquery/doubletaptogo.js"></script>
+
+        <script>
+            $(function() {
+                $('#nav li:has(ul)').doubleTapToGo();
+            });
+        </script>
+
+        <script src="jquery/main.js"></script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.eislideshow.js"></script>
+
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $('#ei-slider').eislideshow({
+                    animation: 'center',
+                    autoplay: true,
+                    slideshow_interval: 3000,
+                    titlesFactor: 0
+                });
+            });
+        </script>
+    </form>
+</body>
+</html>

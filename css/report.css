@@ -1,0 +1,19 @@
+@font-face {font-family: 'futura_bookregular';  src: url('../fonts/futurabt-webfont.eot'); src: url('../fonts/futurabt-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/futurabt-webfont.woff2') format('woff2'),  url('../fonts/futurabt-webfont.woff') format('woff'),    url('../fonts/futurabt-webfont.ttf') format('truetype'),
+         url('../fonts/futurabt-webfont.svg#futura_bookregular') format('svg'); font-weight: normal; font-style: normal;}
+body{ font-family:'futura_bookregular',sans-serif; margin:0px; padding:0px;}
+.main-report-box{ width:1000px; margin:0 auto; border:2px solid #000; position:relative;}
+.school-logo{ width:120px; text-align:center; height:auto; position:absolute; left:10px; top:20px;}
+.school-logo img{ width:100%;}
+.main-report-box h2, .main-report-box h4, .main-report-box p, .main-report-box h3{ font-weight:bold; text-align:center;}
+.main-report-box h3{ font-size:20px; line-height:20px;}
+.main-report-box h2{ font-size:26px;}
+.main-report-box h4{ font-size:18px;}
+
+.student-details{ padding:10px; font-size:14px}
+.student-details table tr td{ padding:5px;}
+.repot-div{ width:100%; font-size:12px}
+.blackcolor{ background:#000; color:#fff; border:1px solid #fff;  }
+.repot-div table tr td{ padding:5px;}
+.repot-div table .blackcolor  td{border:1px solid #fff;}
+.repot-div table .whitecolor  td{border:1px solid #000;}
+.ptag{ text-align:left !important; width:98%; margin:0 auto}

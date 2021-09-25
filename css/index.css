@@ -1,0 +1,438 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #333;
+   background-color: #FFF;
+    background-image: url(../images/iocleffect2bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+div, h1, h2, h3, h4, h5, h6, form, label, input, span, ul, li, p, a
+{
+    margin: 0 auto;
+    padding: 0;
+}
+img
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+  
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#masterhead
+{
+    width: 1024px;
+    height: 120px;
+    padding: 0px;
+    margin: 0px auto;
+    background:url('../images/masterheadbg.jpg') no-repeat;
+}
+
+#header
+{
+    width: 1024px;
+    height: 85px;
+    margin: 0px;
+    padding: 0px;
+}
+#logo
+{
+    width: 395px;
+    height: 85px;
+    float: left;
+    margin: 0px;
+    padding: 3px 0px 0px 3px;
+}
+#menu
+{
+    width: 570px;
+    height: 89px;
+    float: right;
+}
+
+#menu_r1 {
+    background-image: url("../images/menu_bg.jpg");
+    background-repeat: repeat-x;
+    float: right;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+}
+
+#menu_r3 {
+    background-image: url("../images/menu_bg.jpg");
+    background-repeat: repeat-x;
+    color: #000000;
+    float: left;
+    height: 23px;
+    margin: 0;
+    padding: 5px 0 0;
+    width: 210px;
+}
+#menu_imr {
+    background-image: url("../images/menu_corR.jpg");
+    background-repeat: no-repeat;
+    float: right;
+    height: 28px;
+    width: 33px;
+}
+
+#menu_im
+{
+    width: 34px;
+    height: 28px;
+    float: left;
+    background-image: url(../images/menu_cor.jpg);
+    background-repeat: no-repeat;
+}
+
+
+#vdividermenu ul
+{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    float: left;
+    font: bold 100% Verdana, Geneva, sans-serif;
+    
+    font-size: 11px;
+}
+
+* html #vdividermenu ul
+{
+    /*IE only rule, reduce menu width*/
+    width: 99%;
+}
+
+#vdividermenu ul li
+{
+    display: inline;
+}
+
+#vdividermenu ul li a
+{
+    float: left;
+    color: black;
+    padding: 2px 12px;
+    text-decoration: none;
+    background: transparent url(images/vertical.gif) center right no-repeat;
+    background-image: url(../images/vertical.gif);
+    background-position: center right no-repeat;
+}
+
+#vdividermenu ul li a:visited
+{
+    color: black;
+}
+
+#vdividermenu ul li a:hover
+{
+    color: #ffffff;
+    background-image:url('../images/topmenulinkbg.png');
+                 background-repeat:repeat-x;
+                 
+}
+#vdividermenu ul li a.current
+{
+    color: #ffffff;
+  
+    background-image:url('../images/topmenulinkbg.png');
+                 background-repeat:repeat-x;
+}
+
+
+
+#box_topbg
+{
+    width: 1024px;
+    height: 12px;        
+    
+    background-repeat: no-repeat;
+    background-color: #e4e4e4;
+    padding: 0px 0px 0px 0px;
+}
+#main_data
+{
+    width: 1024px;
+    min-height: 450px;
+    float: left;
+   
+    background-color: #FFF;
+    padding: 5px 0px 0px 0px;
+}
+#box_footer
+{
+    width: 1024px;
+    height: 5;    
+    
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-color: #e4e4e4;
+    padding : 0px 0px 0px 0px;
+    
+    
+}
+
+#banner
+{
+    width: 360px;
+    height: 448px;
+    margin: 0px;
+    padding: 0px 9px 0px 0px;
+    float: left;
+    background-image: url(../images/iocl_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#r1
+{
+    width: 587px;
+    height: 276px;
+    float: left;
+}
+#contactus
+{
+    width: 587px;
+    height: 276px;
+    float: left;
+    background-image: url(../images/contactus_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 5px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
+}
+#feedback
+{
+    width: 587px;
+    height: 276px;
+    float: left;
+    background-image: url(../images/feedback_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 5px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
+}
+
+#faqs
+{
+    width: 587px;
+    height: 276px;
+    float: left;
+    background-image: url(../images/faqs_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 5px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
+}
+
+#intro
+{
+    width: 315px;
+    height: 230px;
+    float: left;
+    background-image: url(../images/intro.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin: 10px 0px 0px 0px;
+    padding: 30px 20px 0px 3px;
+    line-height: 20px;
+    text-align: justify;
+    font-size: 11px;
+}
+
+#login
+{
+    width: 233px;
+    height: 205px;
+    float: right;
+    background-image: url(../images/sign_in.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #eeeeee;
+    margin: 10px 0px 0px 0px;
+    padding: 55px 0px 0px 15px;
+}
+#login_r1
+{
+    width: 233px;
+    height: 55px;
+    float: left;
+}
+
+#login_r2
+{
+    width: 233px;
+    height: 42px;
+    float: left;
+}
+#login_r3
+{
+    width: 233px;
+    height: 20px;
+    float: left;
+}
+#login_r4
+{
+    width: 103px;
+    height: 20px;
+    float: left;
+}
+#login_r5
+{
+    width: 75px;
+    height: 20px;
+    float: left;
+    padding: 4px 0px 0px 55px;
+}
+.name
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    line-height: 20px;
+}
+.name2
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    color: #666;
+}
+.forgotp
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    color: #666;
+}
+.forgotp:hover
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    text-decoration: underline;
+    color: #C60;
+}
+
+
+#r2
+{
+    width: 587px;
+    height: 124px;
+    float: left;
+    background-image: url(../images/features.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #eeeeee;
+    margin: 0px 0px 0px 0px;
+    padding: 45px 0px 0px 0px;
+}
+
+#feature
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 11px;
+    color: #333333;
+    background-image: url(../images/arrow.jpg);
+    background-repeat: no-repeat;
+    background-position: 1px top;
+    padding: 0px 0px 8px 0px;
+    padding-left: 2em;
+    line-height: 18px;
+}
+
+#feature_1
+{
+    width: 325px;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 15px;
+    float: left;
+}
+
+#feature_2
+{
+    width: 247px;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+
+#footer {
+  width: 970px;
+  margin: 0 auto;
+  padding: 20px 27px;
+  BACKGROUND: #e5e5e5;
+  /* height: 36px; */
+}
+#copyright
+{
+    width: 300px;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+    text-align: right;
+    font-size: 11px;
+    padding: 0px 0px 0px 0px;
+}
+
+#footer_menu
+{
+    width: 670px;    
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+    font-size: 11px;
+}
+#header_m
+{
+    width: 950px;
+    height: auto;
+    padding: 0px 0px 0px 0px;
+    background-color: #000;
+    float: left;
+}
+
+
+.footer_text
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    color: green;
+    text-decoration: none;    
+}
+.footer_text:hover
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    color: #000;
+    text-decoration: none;
+}
+#menu_r2 {
+    float: right;
+    height: auto;
+    margin: 0;
+    padding-top: 23px;
+    width: 570px;
+}
+input{font-family:Verdana;}
+.logoutmsg{display:none;position:absolute;top:50px;border:0px solid red;height:25px; width:auto;z-index:2050;text-align:center;}
+
+.logoutmsg h1{padding-top:5px;font-size:13px;text-align:center;width:auto;}
+.msg {float:left;height:25px;width:auto;border:0px solid red;padding:0 3px 0 3px;background-image:url('../images/msgpanelrep.png');background-repeat:repeat-x;}
+.closemsg{float:left;width:6px;border:0px solid red;height:25px;background:url('../images/rightmsgcor.png') no-repeat;}
+.leftmsgcor{background:url('../images/logoutmsg.png') no-repeat;height:25px;width:7px;float:left;}
